@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--paddingTop to avoid shadow getting clipped-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_10dp"
+    android:paddingTop="@dimen/_4dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        app:layout_constraintTop_toTopOf="@id/subcategories_image"
+        app:layout_constraintBottom_toBottomOf="@id/subcategories_image"
+        app:layout_constraintStart_toStartOf="@id/subcategories_image"
+        app:layout_constraintEnd_toEndOf="@id/subcategories_image"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_133dp"
+        android:elevation="@dimen/_5dp"
+        android:background="@drawable/rounded_image_shadow"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/subcategories_image"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_133dp"
+        android:elevation="@dimen/_5dp"
+        app:riv_corner_radius="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/glide_image_placeholder"/>
+    
+    <TextView
+        android:id="@+id/subcategories_text"
+        app:layout_constraintTop_toBottomOf="@id/subcategories_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_12dp"
+        android:textSize="@dimen/_10sp"
+        android:fontFamily="@font/trueno_regular"
+        android:textColor="#FF626262"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

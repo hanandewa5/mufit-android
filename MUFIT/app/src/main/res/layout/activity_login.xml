@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white100"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.nostratech.mufit.consumer.login.LoginActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/login"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/root_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_top_logo"
+                android:layout_marginBottom="@dimen/margin_bottom_logo"
+                android:contentDescription="@string/default_content_desc"
+                android:src="@drawable/mufit_red" />
+
+            <TextView
+                android:id="@+id/text_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:text="@string/welcome_text_login"
+                android:textColor="@color/black54"
+                android:textSize="@dimen/_14sp" />
+
+            <EditText
+                android:id="@+id/etEmailPhone"
+                style="@style/EditTextAppearance"
+                android:layout_marginStart="@dimen/margin_left_edit_text"
+                android:layout_marginTop="@dimen/margin_top_edit_text"
+                android:layout_marginEnd="@dimen/margin_right_edit_text"
+                android:hint="@string/email_phone_text_login"
+                android:inputType="phone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_edit_text"
+                android:layout_marginTop="@dimen/margin_top_edit_text_2"
+                android:layout_marginEnd="@dimen/margin_right_edit_text"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/EditTextAppearance"
+                    android:hint="@string/password_text_login"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/edit_text_size"
+                android:layout_height="@dimen/_50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_left_edit_text"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/margin_right_edit_text"
+                android:background="@drawable/button_background_orange"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:text="@string/button_text_login"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/_18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_toForgotPass2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/trueno_regular"
+                    android:text="@string/forgot_pass_title"
+                    android:textColor="@color/grey_3"
+                    android:paddingLeft="@dimen/_20dp"
+                    android:textSize="@dimen/_12sp" />
+
+                <TextView
+                    android:id="@+id/tvToRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:fontFamily="@font/trueno_regular"
+                    android:text="@string/sign_up_in_login"
+                    android:paddingLeft="@dimen/_120dp"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_12sp" />
+
+                <TextView
+                    android:id="@+id/text_toRegister2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:fontFamily="@font/trueno_light"
+                    android:text="@string/to_register_3"
+                    android:paddingRight="@dimen/_20dp"
+                    android:textColor="@color/grey_3"
+                    android:textSize="@dimen/_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

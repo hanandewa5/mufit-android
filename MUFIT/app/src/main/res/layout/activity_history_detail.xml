@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_HistoryDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.nostratech.mufit.consumer.history_detail.HistoryDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/history_detail"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance">
+
+            <!--<TextView-->
+            <!--android:id="@+id/toolbar_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white100"-->
+            <!--android:text="@string/history_detail"-->
+            <!--android:textSize="@dimen/toolbar_text_size"/>-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_HistoryDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout"
+        android:layout_above="@id/layout_btnCancel">
+
+        <ScrollView
+            android:id="@+id/layout_scrollHistoryDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_textGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/image_headerDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_180dp"
+                        android:background="@color/preload_image_gray"
+                        android:contentDescription="@string/default_content_desc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:tint="#73000000"/>
+
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="220dp"-->
+                    <!--android:background="@drawable/image_background_2" />-->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_trainerDetail"
+                        android:layout_width="@dimen/history_detail_profile_pic_size"
+                        android:layout_height="@dimen/history_detail_profile_pic_size"
+                        android:src="@drawable/trainer_icon"
+                        app:layout_constraintBottom_toBottomOf="@id/image_headerDetail"
+                        app:layout_constraintEnd_toEndOf="@id/image_headerDetail"
+                        app:layout_constraintStart_toStartOf="@id/image_headerDetail"
+                        app:layout_constraintTop_toTopOf="@id/image_headerDetail"
+                        app:layout_constraintVertical_bias="0.22000003" />
+
+                    <TextView
+                        android:id="@+id/text_trainerDetailName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="Trainer Name"
+                        android:textColor="@color/white100"
+                        android:textSize="@dimen/_18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_headerDetail"
+                        app:layout_constraintEnd_toEndOf="@id/image_headerDetail"
+                        app:layout_constraintStart_toStartOf="@id/image_headerDetail"
+                        app:layout_constraintTop_toBottomOf="@id/image_trainerDetail"
+                        app:layout_constraintVertical_bias="0.26" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_ratereview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_trainerDetailName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:layout_marginEnd="@dimen/_8dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_trainerDetailName">
+
+                        <TextView
+                            android:id="@+id/text_ratingDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white100"
+                            android:textSize="@dimen/_14sp" />
+
+                        <ImageView
+                            android:id="@+id/image_ratingStar"
+                            android:layout_width="@dimen/_15dp"
+                            android:layout_height="@dimen/_15dp"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:contentDescription="@string/default_content_desc"
+                            android:src="@drawable/rating_star" />
+
+                    </LinearLayout>
+
+                    <!--<android.support.v7.widget.CardView-->
+                    <!--android:id="@+id/card_BookingDate"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/layout_ratereview"-->
+                    <!--android:layout_marginStart="32dp"-->
+                    <!--android:layout_marginEnd="32dp"-->
+                    <!--android:background="@drawable/spinner_style"-->
+                    <!--app:layout_constraintBottom_toBottomOf="@+id/image_headerDetail"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/image_headerDetail">-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:height="50dp"-->
+                    <!--android:padding="15dp">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/text_bookingDate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:fontFamily="@font/trueno_regular"-->
+                    <!--android:text="@string/booking_date"-->
+                    <!--android:textColor="@color/black87"-->
+                    <!--android:textSize="16sp" />-->
+
+
+
+                    <!--</RelativeLayout>-->
+
+                    <!--</android.support.v7.widget.CardView>-->
+
+                    <TextView
+                        style="@style/HistoryDetailLeftSideText"
+                        android:id="@+id/text_address_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="Lokasi"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/image_headerDetail" />
+
+                    <TextView
+                        android:id="@+id/text_address_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:textSize="@dimen/_14sp"
+                        android:textColor="@color/history_detail_grey_dark"
+                        android:layout_marginStart="@dimen/history_detail_padding_horizontal"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/history_detail_padding_horizontal"
+                        android:text="Perumahan ABCDE, Serang, Banten"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_address_label" />
+
+                    <View
+                        android:id="@+id/line0"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_14dp"
+                        android:background="@color/line_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_address_content" />
+
+                    <TextView
+                        style="@style/HistoryDetailLeftSideText"
+                        android:id="@+id/date_time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="@string/history_detail_date_and_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line0" />
+
+                    <TextView
+                        android:id="@+id/text_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/history_detail_padding_horizontal"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="Thu, 6 Feb 2019"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/date_time_label" />
+
+                    <TextView
+                        android:id="@+id/text_session_time"
+                        style="@style/HistoryDetailRightSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/history_detail_padding_horizontal"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_date"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="18.00 - 19.00" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_14dp"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/text_date" />
+
+                    <TextView
+                        android:id="@+id/text_bookingID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="@string/booking_code"
+                        android:textColor="@color/history_detail_grey_1"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line" />
+
+                    <TextView
+                        android:id="@+id/text_BookingCode"
+                        style="@style/HistoryDetailRightSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:text="EAQswl"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/text_bookingID"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_voucher_label"
+                        style="@style/HistoryDetailLeftSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/history_detail_padding_horizontal"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:text="@string/history_detail_voucher_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_bookingID" />
+
+                    <TextView
+                        android:id="@+id/text_voucher_code"
+                        style="@style/HistoryDetailRightSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:text="@string/voucher_code_placeholder"
+                        android:textColor="@color/mufit_purple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_voucher_label"/>
+
+                    <TextView
+                        android:id="@+id/text_statusJudul"
+                        style="@style/HistoryDetailLeftSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/history_detail_padding_horizontal"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:text="@string/status"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_voucher_label"/>
+
+                    <TextView
+                        android:id="@+id/text_Status"
+                        style="@style/HistoryDetailRightSideText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/history_detail_padding_horizontal"
+                        android:text="PAID"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/text_statusJudul"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_rekening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/text_statusJudul"
+                        tools:layout_editor_absoluteX="20dp">
+
+                        <TextView
+                            android:id="@+id/text_transferJudul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trueno_semi_bold"
+                            android:text="@string/transfer_to"
+                            android:textColor="@color/history_detail_grey_1"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_rekening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/rekening"
+                            android:textColor="@color/black87"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_namaPemilikRekening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/layout_rekening">
+
+                        <TextView
+                            android:id="@+id/text_namaPemilikRekening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/nama_pemilik_rekening"
+                            android:textColor="@color/black87"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/line_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_statusJudul" />
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/layout_schedule"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/line_1"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="invisible"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@id/line_1">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/text_trainerSchedule"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:fontFamily="@font/trueno_semi_bold"-->
+                    <!--android:text="@string/trainer_schedule_title"-->
+                    <!--android:textSize="16sp" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/text_dayName"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:fontFamily="@font/trueno_regular"-->
+                    <!--android:textColor="@color/price_color"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/layout_dynamicShift"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="20dp"-->
+                    <!--android:layout_marginEnd="20dp"-->
+                    <!--android:orientation="horizontal" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/line_2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="0.5dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:background="@color/line_color"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@id/layout_schedule" />-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_HistoryDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line_1" />
+
+                    <TextView
+                        android:id="@+id/text_serviceFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/service_fee"
+                        android:textColor="@color/history_detail_grey_2"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rv_HistoryDetail" />
+
+                    <TextView
+                        android:id="@+id/text_rupiahServiceFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_110dp"
+                        android:fontFamily="@font/trueno_light"
+                        android:text="@string/rupiah"
+                        android:textSize="@dimen/_16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_serviceFee"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_priceServiceFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_serviceFee"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:text="50.000"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:textColor="@color/history_detail_grey_1"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/text_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_serviceFee"
+                        android:layout_marginTop="@dimen/_13dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/discount"
+                        android:textColor="@color/history_detail_grey_2"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintTop_toBottomOf="@id/text_serviceFee"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_20dp"/>
+
+                    <TextView
+                        android:id="@+id/text_rupiahDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_110dp"
+                        android:fontFamily="@font/trueno_light"
+                        android:text="@string/rupiah"
+                        android:textSize="@dimen/_16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_discount"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_priceDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="-"
+                        android:textColor="@color/history_detail_grey_1"
+                        android:textSize="@dimen/_16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_discount"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+                        android:id="@+id/line_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:background="#FFE5E5E5"
+                        app:layout_constraintTop_toBottomOf="@id/text_discount" />
+
+                    <TextView
+                        android:id="@+id/text_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line_3"
+                        android:layout_marginStart="@dimen/history_detail_padding_horizontal"
+                        android:layout_marginTop="@dimen/_15dp"
+                        android:text="@string/total"
+                        android:textColor="@color/history_detail_grey_2"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/text_rupiahTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_110dp"
+                        android:fontFamily="@font/trueno_light"
+                        android:text="@string/rupiah"
+                        android:textColor="@color/history_detail_grey_2"
+                        android:textSize="@dimen/_16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_total"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_priceTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/text_rupiahTotal"
+                        android:layout_marginEnd="@dimen/history_detail_padding_horizontal"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="1.000.000"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/_16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_total"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_CancelFromDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:background="@drawable/button_background_blue"
+            android:elevation="10dp"
+            android:text="@string/btn_cancel_title"
+            android:textColor="@color/white100"
+            android:textSize="18sp"
+            android:fontFamily="@font/trueno_semi_bold" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_connection_icon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_internet_desc"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/trueno_regular"/>
+
+        <TextView
+            android:id="@+id/text_noInternet2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/no_internet_desc_2"
+            android:textSize="14sp"
+            android:fontFamily="@font/trueno_regular"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_UploadBuktiFromDetail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/btn_CancelFromDetail"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:background="@drawable/button_background_orange"-->
+        <!--android:elevation="10dp"-->
+        <!--android:text="@string/btn_upload_title"-->
+        <!--android:textColor="@color/white100"-->
+        <!--android:textSize="18sp"-->
+        <!--android:fontFamily="@font/trueno_semi_bold"-->
+        <!--android:visibility="gone" />-->
+
+</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<android.support.constraint.ConstraintLayout android:layout_height="match_parent"--><!--android:layout_width="match_parent"--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+    <!--<android.support.v7.widget.Toolbar--><!--android:id="@+id/toolbar"--><!--style="@style/MufitToolbar"--><!--android:layout_width="match_parent"--><!--android:layout_height="?android:attr/actionBarSize"--><!--app:layout_constraintEnd_toEndOf="parent"--><!--app:layout_constraintStart_toStartOf="parent"--><!--app:layout_constraintTop_toTopOf="parent"--><!--app:title="@string/history_detail"--><!--app:titleTextAppearance="@style/ToolbarTitleAppearance">-->
+
+
+    <!--</android.support.constraint.ConstraintLayout>-->

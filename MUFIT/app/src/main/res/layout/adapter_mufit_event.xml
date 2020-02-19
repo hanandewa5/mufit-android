@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_mufit_event"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/default_content_desc"
+        android:elevation="@dimen/_5dp"
+        app:riv_corner_radius="@dimen/card_corner_radius"
+        android:scaleType="matrix"
+        android:layout_marginBottom="@dimen/_10dp"/>
+
+    <TextView
+        android:id="@+id/text_event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:textSize="@dimen/_11sp"
+        android:textColor="#FF4A4A4A"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:text="Event Test"/>
+
+    <TextView
+        android:id="@+id/text_mufit_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trueno_light"
+        android:textSize="@dimen/_10sp"
+        android:textColor="#FF4A4A4A"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:text="Lorem ipsum dolor sit amet, conscteur adipisicng elit. sed do eiusmod tempor inciddint ut labore ert dolore magna aliqua."/>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/adsDetail_toolbar"
+        style="@style/MufitToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/advertisement"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance" />
+
+    <ScrollView
+        android:id="@+id/adsDetail_scrollView"
+        app:layout_constraintTop_toBottomOf="@id/adsDetail_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingBottom="@dimen/_18dp">
+
+            <!--    Used for creating a shadow below the image-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/adsDetail_cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/_5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/adsDetail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_carousel_height"
+                    android:scaleType="fitXY"
+                    app:riv_corner_radius="@dimen/card_corner_radius" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/adsDetail_cardDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_11dp"
+                app:cardElevation="@dimen/_4dp"
+                app:layout_constraintTop_toBottomOf="@id/adsDetail_cardImage">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/adsDetail_labelDetail"
+                        style="@style/BannerEventDetailTextViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:layout_marginBottom="@dimen/_12dp"
+                        android:text="@string/ads_detail_title" />
+
+                    <View
+                        android:id="@+id/adsDetail_dividerCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:background="@color/line_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="@dimen/_11dp"
+                        android:layout_marginEnd="@dimen/_15dp"
+                        android:layout_marginBottom="@dimen/_15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/adsDetail_textAdsTitle"
+                            style="@style/BannerEventDetailTextViewContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/adsDetail_labelContent"
+                            style="@style/BannerEventDetailTextViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:text="@string/ads_name_title" />
+
+                        <TextView
+                            android:id="@+id/adsDetail_textContent"
+                            style="@style/BannerEventDetailTextViewContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

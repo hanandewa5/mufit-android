@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background_style"
+    android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/training_schedule"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:id="@+id/text_Training_Schedule"
+            android:textColor="@color/orange"
+            android:layout_marginTop="10dp"/>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:calendarViewShown="false"
+            android:layout_weight="1"
+            android:datePickerMode="spinner"/>
+
+        <Button
+            android:id="@+id/btnApplyDate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/apply_date"
+            android:textStyle="bold"
+            android:textColor="@color/white100"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/button_background_blue"/>
+
+</LinearLayout>

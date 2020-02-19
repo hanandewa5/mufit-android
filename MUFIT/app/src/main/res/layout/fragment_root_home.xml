@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <!--<android.support.design.card.MaterialCardView-->
+        <!--android:id="@+id/searchBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/_10dp"-->
+        <!--android:layout_marginTop="@dimen/_16dp"-->
+        <!--android:layout_marginRight="@dimen/_10dp"-->
+        <!--android:layout_marginBottom="@dimen/_16dp"-->
+        <!--android:background="@color/white"-->
+        <!--app:cardCornerRadius="@dimen/_5dp"-->
+        <!--app:cardElevation="@dimen/_4dp">-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/logo_mufit_orange"-->
+                <!--android:layout_width="@dimen/_30dp"-->
+                <!--android:layout_height="@dimen/_15dp"-->
+                <!--android:layout_marginStart="@dimen/_16dp"-->
+                <!--android:background="@drawable/mufit_logo_orange"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/etSearchHome"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="@dimen/_40dp"-->
+                <!--android:layout_marginEnd="@dimen/_10dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:focusable="false"-->
+                <!--android:fontFamily="@font/trueno_regular"-->
+                <!--android:hint="@string/edit_text_search_home"-->
+                <!--android:inputType="text"-->
+                <!--android:padding="@dimen/_10dp"-->
+                <!--android:textColor="#FF808181"-->
+                <!--android:textSize="@dimen/_12sp"-->
+                <!--android:visibility="visible"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toStartOf="@id/search_icon_date_time"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/logo_mufit_orange"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/search_icon_date_time"-->
+                <!--android:layout_width="@dimen/_15dp"-->
+                <!--android:layout_height="@dimen/_15dp"-->
+                <!--android:layout_marginEnd="@dimen/_16dp"-->
+                <!--android:src="@drawable/mufit_search_icon"-->
+                <!--app:layout_constraintBottom_toBottomOf="@+id/etSearchHome"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/etSearchHome" />-->
+
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+
+    <!--</android.support.design.card.MaterialCardView>-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/layout_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/navigation"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+
+
+                <!--height is 110dp, but is given 10 additional dp to give room for Banner to draw its shadow-->
+                <!--carousel margin from bottom 22dp-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/layout_text_greetings"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="@dimen/_10dp"-->
+<!--                    android:layout_marginTop="@dimen/_16dp"-->
+<!--                    android:layout_marginRight="@dimen/_10dp"-->
+<!--                    android:layout_marginBottom="@dimen/_16dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_greetings"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/trueno_light"-->
+<!--                        android:text="@string/home_welcome"-->
+<!--                        android:textColor="#FF626262"-->
+<!--                        android:textSize="@dimen/_12sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text_greetings_name"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/trueno_semi_bold"-->
+<!--                        android:textColor="#FF626262"-->
+<!--                        android:textSize="@dimen/_12sp" />-->
+
+<!--                </LinearLayout>-->
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_layout_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_carousel_height"
+                    shimmer:duration="800">
+<!--                    android:layout_below="@id/layout_text_greetings">-->
+
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carousel_event"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_carousel_height"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        app:fillColor="#FFC0021A"
+                        app:indicatorMarginVertical="@dimen/_15dp"
+                        app:pageColor="#ffffffff"
+                        app:radius="@dimen/_3dp"
+                        app:slideInterval="4000"
+                        app:strokeColor="#00000000"
+                        app:strokeWidth="0dp" />
+
+                    <LinearLayout
+                        android:id="@+id/preload_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/carousel_preload_shimmer" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layout_eventSliderIndicator"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/layout_home_menu"-->
+                <!--android:layout_marginBottom="@dimen/event_slider_indicator_margin"-->
+                <!--android:gravity="center_vertical|center_horizontal"-->
+                <!--android:orientation="horizontal" />-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_home_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shimmer_layout_banner"
+                    android:paddingStart="@dimen/_24dp"
+                    android:paddingEnd="@dimen/_24dp"
+                    android:background="@color/transparent"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_17dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_home_menu_trainer"
+                        android:layout_width="@dimen/home_4_menu_white_badge_size"
+                        android:layout_height="@dimen/home_4_menu_white_badge_size"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@color/white100"
+                        app:layout_constraintEnd_toStartOf="@+id/image_home_menu_mufitEvent"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_33dp"
+                        android:layout_height="@dimen/_21dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/default_content_desc"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@drawable/ic_home_menu_trainer"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_menu_trainer"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_trainer"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_trainer"
+                        app:layout_constraintTop_toTopOf="@id/image_home_menu_trainer" />
+
+                    <TextView
+
+                        android:id="@+id/text_home_menu_trainer"
+                        android:layout_width="@dimen/home_4_menu_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/home_menu_trainer"
+                        android:textAlignment="center"
+                        android:textColor="#FF626262"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_trainer"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_trainer"
+                        app:layout_constraintTop_toBottomOf="@id/image_home_menu_trainer" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_home_menu_mufitEvent"
+                        android:layout_width="@dimen/home_4_menu_white_badge_size"
+                        android:layout_height="@dimen/home_4_menu_white_badge_size"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_37dp"
+                        android:elevation="@dimen/_5dp"
+                        android:src="@color/white100"
+                        app:layout_constraintEnd_toStartOf="@+id/image_home_menu_NewsPromo"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/image_home_menu_trainer"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_33dp"
+                        android:layout_height="@dimen/_24dp"
+                        android:contentDescription="@string/default_content_desc"
+                        android:elevation="@dimen/_5dp"
+                        android:src="@drawable/ic_home_menu_mufit_event"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_menu_mufitEvent"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_mufitEvent"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_mufitEvent"
+                        app:layout_constraintTop_toTopOf="@id/image_home_menu_mufitEvent" />
+
+                    <TextView
+                        android:id="@+id/text_home_menu_mufitEvent"
+                        android:layout_width="@dimen/home_4_menu_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/home_menu_mufitEvent"
+                        android:textAlignment="center"
+                        android:textColor="#FF626262"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_mufitEvent"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_mufitEvent"
+                        app:layout_constraintTop_toBottomOf="@id/image_home_menu_mufitEvent" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_home_menu_NewsPromo"
+                        android:layout_width="@dimen/home_4_menu_white_badge_size"
+                        android:layout_height="@dimen/home_4_menu_white_badge_size"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_38dp"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@color/white100"
+                        app:layout_constraintEnd_toStartOf="@+id/image_home_menu_my_voucher"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/image_home_menu_mufitEvent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_28dp"
+                        android:layout_height="@dimen/_28dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/default_content_desc"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@drawable/ic_home_menu_news_promo"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_menu_NewsPromo"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_NewsPromo"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_NewsPromo"
+                        app:layout_constraintTop_toTopOf="@id/image_home_menu_NewsPromo" />
+
+
+                    <TextView
+                        android:id="@+id/text_home_menu_NewsPromo"
+                        android:layout_width="@dimen/home_4_menu_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/home_menu_newsPromo"
+                        android:textAlignment="center"
+                        android:textColor="#FF4A4A4A"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_NewsPromo"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_NewsPromo"
+                        app:layout_constraintTop_toBottomOf="@id/image_home_menu_NewsPromo" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_home_menu_my_voucher"
+                        android:layout_width="@dimen/home_4_menu_white_badge_size"
+                        android:layout_height="@dimen/home_4_menu_white_badge_size"
+                        android:layout_marginStart="@dimen/_38dp"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@color/white100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/image_home_menu_NewsPromo"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_32dp"
+                        android:layout_height="@dimen/_16dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/default_content_desc"
+                        android:elevation="@dimen/home_4_menu_elevation"
+                        android:src="@drawable/ic_home_menu_my_voucher"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintTop_toTopOf="@id/image_home_menu_my_voucher" />
+
+                    <View
+                        android:id="@+id/bagde_notification_my_voucher"
+                        android:layout_width="@dimen/_9dp"
+                        android:layout_height="@dimen/_9dp"
+                        android:layout_marginTop="@dimen/_3dp"
+                        android:layout_marginEnd="@dimen/_3dp"
+                        android:background="@drawable/badge_shape"
+                        android:contentDescription="@string/default_content_desc"
+                        android:elevation="@dimen/_5dp"
+                        android:text="     "
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintTop_toTopOf="@id/image_home_menu_my_voucher" />
+
+                    <TextView
+                        android:id="@+id/text_home_menu_myVoucher"
+                        android:layout_width="@dimen/home_4_menu_text_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/trueno_regular"
+                        android:text="@string/my_voucher"
+                        android:textAlignment="center"
+                        android:textColor="#FF4A4A4A"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintStart_toStartOf="@id/image_home_menu_my_voucher"
+                        app:layout_constraintTop_toBottomOf="@id/image_home_menu_my_voucher" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.75" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_ourTrainerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_home_menu"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_30dp">
+
+                    <TextView
+                        android:id="@+id/text_ourTrainerTitle"
+                        style="@style/HomeTextViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/our_trainer_title" />
+
+                    <TextView
+                        android:id="@+id/text_searchAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:text="@string/search_all"
+                        android:textColor="#FF626262"
+                        android:textSize="@dimen/_12sp" />
+
+                </RelativeLayout>
+
+
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_layout_list_trainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_ourTrainerTitle">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_ourTrainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shimmer_layout_list_trainer"
+                        android:layout_alignStart="@+id/shimmer_layout_list_trainer"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingTop="@dimen/_10dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_preload_list_trainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingTop="@dimen/_10dp"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                        <include layout="@layout/adapter_preload_list_trainer_home" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/text_categoriesTitle"
+                    style="@style/HomeTextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shimmer_layout_list_trainer"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:text="@string/categories" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_subcategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_categoriesTitle"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="@dimen/_20dp" />
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layout_home_categories"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layout_home_categories_group_excercise"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:gravity="center">-->
+
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                <!--android:id="@+id/image_home_categories_group_excercise"-->
+                <!--android:layout_width="@dimen/_100dp"-->
+                <!--android:layout_height="133dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:contentDescription="@string/default_content_desc"-->
+                <!--android:elevation="@dimen/_5dp"-->
+                <!--android:src="@drawable/splash_screen_2_agt"-->
+                <!--app:riv_corner_radius="@dimen/card_corner_radius"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_home_categories_group_excercise"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:fontFamily="@font/trueno_light"-->
+                <!--android:textSize="@dimen/_10sp"-->
+                <!--android:textColor="#FF4A4A4A"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:layout_marginTop="@dimen/_10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/home_categories_group_exercies" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layout_home_categories_kid_excercise"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:gravity="center">-->
+
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                <!--android:id="@+id/image_home_categories_kid_excercise"-->
+                <!--android:layout_width="@dimen/_100dp"-->
+                <!--android:layout_height="133dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:contentDescription="@string/default_content_desc"-->
+                <!--android:elevation="@dimen/_5dp"-->
+                <!--android:src="@drawable/splash_screen_2_agt"-->
+                <!--app:riv_corner_radius="@dimen/card_corner_radius"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_home_categories_kid_excercise"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:fontFamily="@font/trueno_light"-->
+                <!--android:textSize="@dimen/_10sp"-->
+                <!--android:textColor="#FF4A4A4A"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:layout_marginTop="@dimen/_10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/home_categories_kid_exercies"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layout_home_categories_personal_trainer"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:gravity="center">-->
+
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                <!--android:id="@+id/image_home_categories_personal_trainer"-->
+                <!--android:layout_width="@dimen/_100dp"-->
+                <!--android:layout_height="133dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:contentDescription="@string/default_content_desc"-->
+                <!--android:elevation="@dimen/_5dp"-->
+                <!--android:src="@drawable/splash_screen_2_agt"-->
+                <!--app:riv_corner_radius="@dimen/card_corner_radius"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_home_categories_personal_trainer"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:fontFamily="@font/trueno_light"-->
+                <!--android:textSize="@dimen/_10sp"-->
+                <!--android:textColor="#FF4A4A4A"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="1"-->
+                <!--android:layout_marginTop="@dimen/_10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/home_categories_personal_trainer" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/whatsHot_label"
+                    style="@style/HomeTextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_subcategories"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/home_whathotTitle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/whatsHot_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/whatsHot_label"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_14dp"
+                    android:layout_marginEnd="@dimen/_20dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/whatsHot_articleImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@color/preload_image_gray"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150dp"
+                        app:riv_corner_radius="@dimen/_5dp"/>
+
+                    <TextView
+                        android:id="@+id/whatsHot_articleTitle"
+                        app:layout_constraintTop_toBottomOf="@id/whatsHot_articleImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:textSize="@dimen/_12sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#FF626262"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/whatsHot_articleDescription"
+                        android:layout_marginTop="@dimen/_3dp"
+                        app:layout_constraintTop_toBottomOf="@id/whatsHot_articleTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/trueno_light"
+                        android:textColor="#FF626262"
+                        android:textSize="@dimen/_12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/rv_hotnews"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/label_whatshot"-->
+                    <!--android:layout_marginStart="@dimen/_20dp"-->
+                    <!--android:layout_marginTop="@dimen/_14dp"-->
+                    <!--android:layout_marginEnd="@dimen/_20dp" />-->
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_layout_what_hots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/whatsHot_label">
+
+                    <LinearLayout
+                        android:id="@+id/mlayout_what_hots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/adapter_preload_shimmer" />
+
+                        <include layout="@layout/adapter_preload_shimmer" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_connection_icon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/no_internet_desc"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14sp" />
+
+        <TextView
+            android:id="@+id/text_noInternet2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="@string/no_internet_desc_2"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

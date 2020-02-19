@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_5dp"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView android:id="@+id/image_eventSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/preload_image_gray"
+        android:scaleType="centerCrop"
+        android:background="@color/white"
+        android:elevation="@dimen/_3dp"
+        android:adjustViewBounds="true"/>
+
+</RelativeLayout>

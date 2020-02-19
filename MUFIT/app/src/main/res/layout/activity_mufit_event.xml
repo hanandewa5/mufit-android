@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mufit_red_gradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/home_menu_mufitEvent"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        shimmer:duration="800">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14dp"
+            android:layout_marginStart="@dimen/_14dp"
+            android:layout_marginBottom="@dimen/_14dp"
+            android:layout_marginEnd="@dimen/_14dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mufit_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"/>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_150dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_schedule_icon" />
+
+        <TextView
+            android:id="@+id/text_Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="center"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/event_not_found"
+            android:textSize="@dimen/_16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

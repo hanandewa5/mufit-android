@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_myVoucher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white100"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mufit_red_gradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            style="@style/MufitToolbar"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance"
+            app:title="@string/voucher_toolbar_title">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_input_vocher_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_83dp"
+        android:layout_below="@+id/appbar_layout"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/layout_submit_voucher"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/my_voucher_edittext_height"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_23dp"
+            android:background="@drawable/line"
+            app:layout_constraintEnd_toStartOf="@id/button_submit_voucher_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/submit_voucher_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50dp"
+            android:background="@null"
+            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz 0123456789"
+            android:fontFamily="@font/trueno_regular"
+            android:hint="@string/input_voucher_code"
+            android:inputType="textCapCharacters"
+            android:maxLines="1"
+            android:paddingStart="@dimen/register_edittext_padding_start_end"
+            android:paddingEnd="@dimen/register_edittext_padding_start_end"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/register_edittext_text_size"
+            app:layout_constraintEnd_toStartOf="@id/button_clear_voucher_code"
+            app:layout_constraintStart_toStartOf="@id/layout_submit_voucher"
+            app:layout_constraintTop_toTopOf="@id/layout_submit_voucher"
+            app:layout_constraintBottom_toBottomOf="@id/layout_submit_voucher"/>
+
+        <ImageButton
+            android:id="@+id/button_clear_voucher_code"
+            android:contentDescription="@string/clear_voucher_code"
+            android:layout_width="@dimen/_10dp"
+            android:layout_height="@dimen/_10dp"
+            android:layout_alignEnd="@id/submit_voucher_edit_text"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:src="@mipmap/ic_clear_voucher"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_submit_voucher"
+            app:layout_constraintEnd_toEndOf="@id/layout_submit_voucher"
+            app:layout_constraintTop_toTopOf="@id/layout_submit_voucher" />
+
+
+        <Button
+            android:id="@+id/button_submit_voucher_code"
+            android:layout_width="@dimen/_90dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:background="@drawable/voucher_button_bg_selector"
+            android:text="@string/submit_rate_review"
+            android:textAllCaps="false"
+            android:textColor="@color/white100"
+            android:textSize="@dimen/voucher_btn_submit_text_size"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/layout_submit_voucher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layout_submit_voucher" />
+
+        <!--<Button-->
+            <!--android:id="@+id/button_disable"-->
+            <!--android:layout_width="90dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignBottom="@+id/layout_text_input_code_vocher"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginEnd="11dp"-->
+            <!--android:background="@drawable/my_voucher_button_disabled"-->
+            <!--android:enabled="false"-->
+            <!--android:text="@string/submit_rate_review"-->
+            <!--android:textColor="@color/white100"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textSize="@dimen/voucher_btn_submit_text_size" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_text_choose_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/layout_input_vocher_code"
+        android:background="@color/grey_f1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/choose_your_voucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_light"
+            android:text="@string/choose_voucher"
+            android:textSize="@dimen/_12sp"
+            android:textColor="#FF545454"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_my_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layout_text_choose_voucher"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_40dp">
+
+        <LinearLayout
+            android:id="@+id/layout_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_schedule_icon" />
+
+        <TextView
+            android:id="@+id/text_Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="center"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/myvoucher_not_found"
+            android:textSize="@dimen/_16sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/default_content_desc"
+            android:src="@drawable/no_connection_icon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_internet_desc"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14sp" />
+
+        <TextView
+            android:id="@+id/text_noInternet2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:focusableInTouchMode="false"
+            android:text="@string/no_internet_desc_2"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_UseVoucher"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:background="@drawable/button_background_blue"
+        android:elevation="@dimen/_10dp"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:text="@string/use_vocher"
+        android:textColor="@color/white100"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

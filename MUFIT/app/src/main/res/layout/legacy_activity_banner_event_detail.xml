@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_ParentEventDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/booking_event"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout">
+
+        <ScrollView
+            android:id="@+id/layout_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_imageEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/banner_event_padding_horizontal"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/banner_event_padding_horizontal"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/_5dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/image_Event"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_carousel_height"
+                        android:scaleType="fitXY"
+                        app:riv_corner_radius="@dimen/card_corner_radius" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_AvailableSlot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_imageEvent"
+                    android:layout_marginStart="@dimen/banner_event_padding_horizontal"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/banner_event_padding_horizontal"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/_4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:layout_marginTop="@dimen/_11dp"
+                        android:layout_marginEnd="@dimen/_12dp"
+                        android:layout_marginBottom="@dimen/_13dp">
+
+                        <TextView
+                            android:id="@+id/text_availableSlotTitle"
+                            style="@style/BannerEventDetailTextViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/available_slot_title" />
+
+                        <TextView
+                            android:id="@+id/text_availableSlot"
+                            style="@style/BannerEventDetailTextViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/text_availableSlotTitle"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="#FFF5A623"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_EventDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_AvailableSlot"
+                    android:layout_marginStart="@dimen/banner_event_padding_horizontal"
+                    android:layout_marginTop="@dimen/_11dp"
+                    android:layout_marginEnd="@dimen/banner_event_padding_horizontal"
+                    android:layout_marginBottom="@dimen/_15dp"
+                    app:cardElevation="@dimen/_4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_EventDetailsTitle"
+                            style="@style/BannerEventDetailTextViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14dp"
+                            android:layout_marginTop="@dimen/_12dp"
+                            android:layout_marginBottom="@dimen/_12dp"
+                            android:text="@string/event_details_title" />
+
+                        <View
+                            android:id="@+id/line_eventDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1dp"
+                            android:background="@color/line_color" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="@dimen/_11dp"
+                            android:layout_marginEnd="@dimen/_15dp"
+                            android:layout_marginBottom="@dimen/_15dp">
+
+                            <TextView
+                                android:id="@+id/text_eventDesc"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem ipsum dolor sit amet Event Details" />
+
+                            <TextView
+                                android:id="@+id/text_startRegis_title"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_eventDesc"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/start_registration" />
+
+                            <TextView
+                                android:id="@+id/text_startRegis"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_startRegis_title"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:textColor="#FFF5A623" />
+
+                            <TextView
+                                android:id="@+id/text_endRegis_title"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_startRegis"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/end_registration" />
+
+                            <TextView
+                                android:id="@+id/text_endRegis"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_endRegis_title"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:textColor="#FFF5A623" />
+
+                            <TextView
+                                android:id="@+id/text_trainerNameTitle"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_endRegis"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/trainer_name_title" />
+
+                            <TextView
+                                android:id="@+id/text_trainerName"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_trainerNameTitle"
+                                android:layout_marginTop="@dimen/_5dp" />
+
+                            <TextView
+                                android:id="@+id/text_dateTimeTitle"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_trainerName"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/date_time_title" />
+
+                            <TextView
+                                android:id="@+id/text_dateTime"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_dateTimeTitle"
+                                android:layout_marginTop="@dimen/_5dp" />
+
+                            <TextView
+                                android:id="@+id/text_classShiftTitle"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text_dateTime"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/class_label" />
+
+                            <RelativeLayout
+                                android:id="@+id/layout_classAndVoucherCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_classShiftTitle">
+
+                                <TextView
+                                    android:id="@+id/text_classSpeciality"
+                                    style="@style/BannerEventDetailTextViewContent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginTop="@dimen/_5dp" />
+
+                                <Button
+                                    android:id="@+id/btn_copyClipboard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/button_background_transparent_2"
+                                    android:padding="@dimen/_10dp"
+                                    android:text="@string/copy_code"
+                                    android:textSize="@dimen/_12sp"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/text_priceTitle"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/layout_classAndVoucherCode"
+                                android:layout_marginTop="@dimen/_18dp"
+                                android:text="@string/price_title" />
+
+                            <TextView
+                                android:id="@+id/text_price"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_priceTitle"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:textColor="#FFF5A623" />
+
+                            <TextView
+                                android:id="@+id/text_locationTitle"
+                                style="@style/BannerEventDetailTextViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/text_price"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:text="@string/location_title" />
+
+                            <fragment
+                                android:id="@+id/map_Event"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150dp"
+                                android:layout_below="@+id/text_locationTitle"
+                                android:layout_marginTop="@dimen/_10dp"
+                                tools:context=".legacy.BannerEventDetailActivity" />
+
+                            <TextView
+                                android:id="@+id/text_location"
+                                style="@style/BannerEventDetailTextViewContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/map_Event"
+                                android:layout_marginTop="@dimen/_10dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_bookingEventDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_below="@id/card_EventDetails"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:background="@drawable/button_background_blue"
+                    android:fontFamily="@font/trueno_semi_bold"
+                    android:text="@string/booking_now"
+                    android:textColor="@color/white100"
+                    android:textSize="@dimen/_18sp" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_connection_icon"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/no_internet_desc2"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

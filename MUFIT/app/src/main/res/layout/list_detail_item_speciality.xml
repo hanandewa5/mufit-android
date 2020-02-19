@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/detail_trainer_duration_margin"
+    android:layout_marginBottom="@dimen/detail_trainer_duration_margin">
+
+    <TextView
+        android:id="@+id/duration_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/detail_trainer_duration_margin"
+        android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingTop="@dimen/detail_trainer_duration_margin"
+        android:text="@string/duration"
+        android:textSize="@dimen/detail_trainer_duration_text_size"
+        android:textColor="@color/black87"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/detail_trainer_duration_margin"
+        android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:textColor="@color/black87"
+        android:textSize="14sp"
+        android:text="@string/duration_dummy"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_trainer_adapter_speciality_divider"
+        android:background="#dfdfdf" />
+
+</LinearLayout>

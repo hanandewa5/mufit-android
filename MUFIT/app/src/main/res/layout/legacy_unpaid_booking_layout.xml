@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUnpaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_toStartOf="@+id/text_dateUnpaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_titleEventUnpaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event"
+                    android:textColor="@color/unpaid_color"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/history_booking_title"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/text_titleUnpaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unpaid_title"
+                    android:layout_toEndOf="@id/text_titleEventUnpaid"
+                    android:textColor="@color/unpaid_color"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/history_booking_title"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"/>
+
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_dateUnpaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/font_color_2"
+                    android:textSize="@dimen/history_booking_date"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_TrainerUnpaid"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/trainer_icon"
+                    android:elevation="10dp"
+                    android:layout_marginStart="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_idUnpaid"
+                        android:textSize="@dimen/history_booking_trainer_name_rate"
+                        android:textColor="@color/font_color_1"/>
+
+                    <TextView
+                        android:id="@+id/text_trainerNameUnpaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/history_booking_trainer_name_rate"
+                        android:textColor="@color/font_color_1"/>
+
+                    <TextView
+                        android:id="@+id/text_specialityUnpaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/history_booking_speciality_shift"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/price_color"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dynamicUnpaid"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/btn_upload"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/btn_bayar"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:elevation="10dp"
+                        android:textColor="@color/white100"
+                        android:background="@drawable/button_background_blue"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

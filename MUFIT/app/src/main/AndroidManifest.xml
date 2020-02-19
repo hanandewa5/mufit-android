@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nostratech.mufit.consumer">
+
+    <!-- usesCleartextTraffic set to true to supress "HTTP FAILED: java.net.UnknownServiceException:
+    CLEARTEXT communication to dev-api.mufit.id not permitted by network security policy"-->
+    <application
+        android:name=".MufitApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launcher"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup, android:usesCleartextTraffic">
+        <activity android:name=".news.NewsDetailActivity"></activity>
+        <activity android:name=".detailtrainer.ImageFullscreenActivity" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="AIzaSyCynyW5stfg5n44jEoOAjDboPr4uAaR5vQ" /> -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppRegisterTheme" />
+        <activity
+            android:name=".forgot_password.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search_trainer.SearchTrainerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".history_booking.HistoryBookingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppHistoryTheme" />
+        <activity android:name=".body_composition.BodyCompositionActivity" />
+        <activity
+            android:name=".booking_package.BookingPackageActivity"
+            android:label=""
+            android:parentActivityName=".detailtrainer.DetailTrainerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.BookingWebView_package"
+            android:label=""
+            android:parentActivityName=".booking_package.BookingPackageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".schedule.ScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".rate_review.RateReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppRegisterTheme" />
+        <activity
+            android:name=".history_detail.HistoryDetailActivity"
+            android:label=""
+            android:parentActivityName=".root.RootActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".root.RootActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".detailtrainer.DetailTrainerActivity"
+            android:label=""
+            android:parentActivityName=".home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".change_password.ChangePasswordActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".my_voucher.MyVoucherActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.HomeActivity_New"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.SubCategoriesActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news_promo.NewsPromoActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mufit_event.MufitEventActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name=".booking.BookingSessionActivity"
+            android:parentActivityName=".detailtrainer.DetailTrainerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".banner.voucher.VoucherDetailActivity" />
+        <activity android:name=".banner.advertisement.AdvertisementDetailActivity" />
+        <activity android:name=".banner.event.EventDetailActivity" />
+        <activity android:name=".muhealth.detail.ComponentDetailActivity" />
+        <activity android:name=".muhealth.onboarding.OnboardingActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBNz22vZi56UJ0fep5OkjTWHDFzHv1E8oE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/launcher" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2336c1655efa505f6ff04997e1dbbf3fe9829ee1" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name=".firebase.MyFirebaseInstanceID">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- <meta-data -->
+        <!-- android:name="io.fabric.ApiKey" -->
+        <!-- android:value="602dbdb3d3ab35ee75fbcb4001da6fab54dbb1ac" /> -->
+        <service android:name=".firebase.MyFirebaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".firebase.MyJobDispatcher"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+    </application>
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>

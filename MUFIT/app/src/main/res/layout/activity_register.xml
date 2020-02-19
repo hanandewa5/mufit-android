@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white100"
+    android:fillViewport="true"
+    tools:context="com.nostratech.mufit.consumer.register.RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/logo_mufit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_90dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/default_content_desc"
+            android:src="@drawable/mufit_red" />
+
+        <TextView
+            android:id="@+id/text_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_mufit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/register_text_welcome_margin_bottom"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:text="@string/welcome_sign_up"
+            android:textSize="@dimen/_18sp" />
+
+        <EditText
+            android:id="@+id/text_fullname"
+            style="@style/EditTextAppearance"
+            android:layout_below="@id/text_welcome"
+            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz ÁáÂâÃãÀàÇçÉéÊêÍíÓóÔôÕõÚú"
+            android:hint="@string/fullname"
+            android:inputType="textCapWords"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_fullname"
+            android:layout_marginTop="@dimen/register_edittext_margin_top"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_email"
+                style="@style/EditTextAppearance"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/text_email_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/not_valid_email"
+                android:textColor="@color/error_text"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_email"
+            android:layout_marginTop="@dimen/register_edittext_margin_top"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_phone"
+                style="@style/EditTextAppearance"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLength="13" />
+
+            <TextView
+                android:id="@+id/text_phone_alert"
+                android:layout_width="@dimen/register_edittext_width"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_regular"
+                android:text="@string/phone_validation"
+                android:textColor="@color/error_text"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_phone"
+            android:layout_marginTop="@dimen/register_edittext_margin_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_password"
+                style="@style/EditTextAppearance"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textSize="@dimen/register_edittext_text_size" />
+
+            <TextView
+                android:id="@+id/text_password_alert"
+                android:layout_width="@dimen/register_edittext_width"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_regular"
+                android:text="@string/invalid_password"
+                android:textColor="@color/error_text"
+                android:visibility="gone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_password"
+            android:layout_marginTop="@dimen/register_edittext_margin_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_confirm_password"
+                style="@style/EditTextAppearance"
+                android:hint="@string/confirmation_password"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true" />
+
+            <TextView
+                android:id="@+id/text_password_confirmation_alert"
+                android:layout_width="@dimen/register_edittext_width"
+                android:layout_height="wrap_content"
+                android:text="@string/password_not_match"
+                android:textColor="@color/error_text"
+                android:visibility="gone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_confirm_password"
+            android:layout_marginTop="@dimen/register_button_margin_top_bottom"
+            android:layout_marginBottom="@dimen/register_button_margin_top_bottom"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/custom_button"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:text="@string/sign_up"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/register_button_text_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button_disable"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:background="@drawable/custom_button_disable"
+                android:enabled="false"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:text="@string/sign_up"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/register_button_text_size" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_button"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/text_ask_account_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="@string/ask_mufit_account"
+                android:textColor="@color/grey_3" />
+
+            <TextView
+                android:id="@+id/text_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="@string/login"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/text_ask_account_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="@string/here"
+                android:textColor="@color/grey_3" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

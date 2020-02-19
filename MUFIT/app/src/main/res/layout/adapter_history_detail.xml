@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_speciality"
+            android:textSize="@dimen/_16sp"
+            android:text="@string/speciality"
+            android:textColor="@color/history_detail_grey_dark"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_quantity"
+            android:layout_toEndOf="@id/text_speciality"
+            android:layout_alignBaseline="@id/text_speciality"
+            android:layout_marginStart="@dimen/_20dp"
+            android:fontFamily="@font/trueno_regular"
+            android:textSize="@dimen/_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_rupiah"
+            android:layout_toStartOf="@+id/text_price"
+            android:layout_alignBaseline="@id/text_speciality"
+            android:layout_alignParentEnd="true"
+            android:text="@string/rupiah"
+            android:textColor="@color/history_detail_grey_dark"
+            android:textSize="@dimen/_16sp"
+            android:fontFamily="@font/trueno_light"
+            android:layout_marginEnd="@dimen/_110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/text_speciality"
+            android:textColor="@color/orange"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/_16sp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:fontFamily="@font/trueno_semi_bold"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

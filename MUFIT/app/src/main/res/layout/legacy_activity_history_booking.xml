@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/legacy_element_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mufit_red_gradient"
+            android:orientation="vertical"
+            android:elevation="@dimen/_9dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarHistoryBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:titleTextColor="@color/white100">
+
+                <ImageView
+                    android:id="@+id/logo_mufit"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mufit_white"
+                    android:visibility="visible" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="?android:attr/actionBarSize"
+                android:textAlignment="center"
+                android:background="@color/transparent"
+                app:tabIndicatorHeight="@dimen/_5dp"
+                app:tabIndicatorColor="@color/white100"
+                app:tabSelectedTextColor="@color/white"
+                app:tabRippleColor="@null"
+                app:tabGravity="fill"
+                app:tabPaddingTop="@dimen/_8dp"
+                app:tabTextAppearance="@style/HistoryTabTextAppearance" />
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/navigation"
+            android:layout_below="@+id/toolbarLayout" />
+
+    </RelativeLayout>
+
+</com.flipboard.bottomsheet.BottomSheetLayout>
+

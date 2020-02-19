@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/settings"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance">
+
+            <!--<TextView-->
+            <!--android:id="@+id/toolbar_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white100"-->
+            <!--android:text="@string/settings"-->
+            <!--android:textSize="@dimen/toolbar_text_size"-->
+            <!--android:layout_marginTop="10dp"/>-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_language"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/circle1"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/text_language"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/circle1"
+            android:text="@string/language"/>
+
+        <Spinner
+            android:id="@+id/spinner_settings"
+            android:layout_width="@dimen/_130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:dropDownWidth="@dimen/_130dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_1" />
+
+    <RelativeLayout
+        android:id="@+id/layout_repeat_tutorial"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/circle2"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/text_repeat_tutorial"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/circle2"
+            android:text="@string/repeat_tutorial" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/grey_1" />
+
+    <RelativeLayout
+        android:id="@+id/settings_layoutWebsite"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/settings_circleWebsite"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/settings_labelWebsite"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/settings_circleWebsite"
+            android:text="@string/website" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/settings_divider3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/grey_1" />
+
+    <RelativeLayout
+        android:id="@+id/settings_layoutSocialMedia"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/settings_circleSocialMedia"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/settings_labelSocialMedia"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/settings_circleSocialMedia"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:text="@string/socmed" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/settings_divider4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/grey_1" />
+
+    <RelativeLayout
+        android:id="@+id/settings_layoutFAQ"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/settings_circleFAQ"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/settings_labelFAQ"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/settings_circleFAQ"
+            android:text="@string/faq" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/settings_divider5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/grey_1" />
+
+    <RelativeLayout
+        android:id="@+id/settings_layoutLogout"
+        style="@style/SettingsViewGroup"
+        android:layout_width="match_parent">
+
+        <View
+            android:id="@+id/settings_circleLogout"
+            android:layout_width="@dimen/profile_grey_circle_size"
+            android:layout_height="@dimen/profile_grey_circle_size"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_circle" />
+
+        <TextView
+            android:id="@+id/settings_labelLogout"
+            style="@style/SettingsOptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/settings_circleLogout"
+            android:text="@string/logout" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/settings_divider6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/grey_1" />
+
+</LinearLayout>

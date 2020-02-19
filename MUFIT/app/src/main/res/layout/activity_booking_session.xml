@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookSession_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".booking.BookingSessionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MufitToolbar"
+        android:id="@+id/bookSession_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/booking"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bookSession_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/_5dp"
+        app:layout_constraintBottom_toTopOf="@id/button_confirm"
+        app:layout_constraintTop_toBottomOf="@id/bookSession_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_detail_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@color/white"
+                android:elevation="@dimen/_3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title_order_detail"
+                    style="@style/Booking2LayoutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/booking_content_margin_start"
+                    android:text="@string/order_detail" />
+
+                <View
+                    android:id="@+id/bookSession_divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/booking_divider"
+                    android:background="@color/line_light_grey" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2dp">
+
+                    <TextView
+                        android:id="@+id/text_trainer"
+                        style="@style/Booking2LayoutSubtitleLightGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/booking_content_margin_start"
+                        android:layout_marginTop="@dimen/_14dp"
+                        android:text="@string/trainer"
+                        android:padding="@dimen/_2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_trainer_string"
+                        style="@style/Booking2LayoutSubtitleDarkGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_110dp"
+                        android:text="Arnold Scw......."
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_trainer"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_class"
+                        style="@style/Booking2LayoutSubtitleLightGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6dp"
+                        android:padding="@dimen/_2dp"
+                        android:text="@string/order_detail_class"
+                        app:layout_constraintStart_toStartOf="@id/text_trainer"
+                        app:layout_constraintTop_toBottomOf="@id/text_trainer" />
+
+                    <TextView
+                        android:id="@+id/text_class_string"
+                        style="@style/Booking2LayoutSubtitleDarkGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_110dp"
+                        android:text="Zumba"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_class"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_date"
+                        style="@style/Booking2LayoutSubtitleLightGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_2dp"
+                        android:layout_marginStart="@dimen/booking_content_margin_start"
+                        android:text="@string/order_detail_date"
+                        android:layout_marginTop="@dimen/_6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_class" />
+
+                    <TextView
+                        android:id="@+id/text_date_string"
+                        style="@style/Booking2LayoutSubtitleDarkGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_110dp"
+                        android:text="Monday, 1 Februari 2019"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_date"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_shift"
+                        style="@style/Booking2LayoutSubtitleLightGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6dp"
+                        android:text="@string/order_detail_shift"
+                        android:paddingBottom="@dimen/_12dp"
+                        android:paddingStart="@dimen/_2dp"
+                        android:paddingEnd="@dimen/_2dp"
+                        app:layout_constraintStart_toStartOf="@id/text_date"
+                        app:layout_constraintTop_toBottomOf="@id/text_date" />
+
+                    <TextView
+                        android:id="@+id/text_shift_string"
+                        style="@style/Booking2LayoutSubtitleDarkGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_12dp"
+                        android:text="13.00 - 14.00"
+                        app:layout_constraintBaseline_toBaselineOf="@id/text_shift"
+                        app:layout_constraintStart_toStartOf="@id/text_date_string" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@color/white"
+                android:elevation="@dimen/_3dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/booking_content_padding_bottom">
+
+                <TextView
+                    android:id="@+id/text_title_location"
+                    style="@style/Booking2LayoutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/booking_content_margin_start"
+                    android:text="@string/booking_location_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/booking_divider"
+                    android:background="@color/line_light_grey" />
+
+                <TextView
+                    android:id="@+id/text_pick_location"
+                    style="@style/Booking2LayoutSmallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/booking_content_margin_start"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginEnd="@dimen/booking_content_margin"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:text="@string/booking_pick_location" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_131dp"
+                        android:layout_marginStart="@dimen/_12dp"
+                        android:layout_marginEnd="@dimen/_12dp" />
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.nostratech.mufit.consumer.utils.MySupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_131dp"
+                        android:layout_marginStart="@dimen/_12dp"
+                        android:layout_marginEnd="@dimen/_12dp"
+                        tools:context=".MapsActivity" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_address_chosen"
+                    style="@style/Booking2LayoutSubtitleDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_15dp"
+                    android:fontFamily="@font/trueno_light"
+                    android:maxLines="5"
+                    android:textSize="@dimen/_12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/booking_divider"
+                    android:background="@color/line_light_grey" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/text_note_user"
+                    style="@style/Booking2LayoutSubtitleDarkGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_12dp"
+                    android:background="@drawable/edit_text_bg_thin_underline_selector"
+                    android:hint="@string/booking_note_user"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="5"
+                    android:paddingStart="@dimen/_8dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:paddingBottom="@dimen/_10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@color/white"
+                android:elevation="@dimen/_3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title_payment"
+                    style="@style/Booking2LayoutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/booking_content_margin_start"
+                    android:text="@string/booking_payment_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/booking_divider"
+                    android:background="#FFDFDFDF" />
+
+                <TextView
+                    android:id="@+id/choose_payment_method_label"
+                    style="@style/Booking2LayoutSmallText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13dp"
+                    android:gravity="center"
+                    android:text="@string/choose_payment_method" />
+
+                <LinearLayout
+                    android:id="@+id/layout_choose_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/booking_recyclerview_payment_method"
+                    android:layout_marginTop="@dimen/_13dp"
+                    android:layout_marginEnd="@dimen/booking_recyclerview_payment_method"
+                    android:background="@drawable/rounded_corner_payment_method"
+                    android:padding="@dimen/_1dp">
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/choose_payment_method"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                    <Spinner
+                        android:id="@+id/spinner_payment_method"
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:layout_height="@dimen/_40dp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_30dp">
+
+                    <TextView
+                        android:id="@+id/text_voucher_label"
+                        style="@style/Booking2LayoutSubtitleLightGrey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_15dp"
+                        android:text="@string/booking_voucher_title1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/button_my_voucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/button_background_transparent"
+                            android:textColor="#9400D3" />
+
+                        <TextView
+                            android:id="@+id/text_myVoucherName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_15dp"
+                            android:layout_marginEnd="@dimen/_25dp"
+                            android:fontFamily="@font/trueno_regular"
+                            android:text="(VOUCHER CODE)"
+                            android:textColor="#9400D3"
+                            android:textSize="@dimen/_12sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/button_show_voucher"
+                            android:layout_width="@dimen/_10dp"
+                            android:layout_height="@dimen/_10dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:layout_marginEnd="@dimen/_10dp"
+                            android:background="@drawable/ic_arrow_input_voucher"
+                            android:padding="@dimen/_20dp"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/button_cancel_voucher_use"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10dp"
+                            android:background="@mipmap/ic_clear_voucher"
+                            android:contentDescription="@string/clear_voucher_code"
+                            android:padding="@dimen/_5dp"
+                            android:visibility="visible" />
+
+                        <View
+                            android:id="@+id/view_clear_voucher"
+                            android:layout_width="@dimen/_30dp"
+                            android:layout_height="@dimen/_30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/booking_divider"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:background="@color/line_light_grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_price_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_original_price_label"
+                            style="@style/Booking2LayoutSubtitleDarkGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/booking_price" />
+
+                        <TextView
+                            style="@style/Booking2RupiahText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_95dp" />
+
+                        <TextView
+                            android:id="@+id/text_original_price"
+                            style="@style/Booking2PriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="500.000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_11dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_discount"
+                            style="@style/Booking2LayoutSubtitleDarkGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/booking_discount" />
+
+                        <!--<TextView-->
+                        <!--style="@style/Booking2RupiahText"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignBaseline="@id/text_discount_string"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_marginEnd="@dimen/_95dp"-->
+                        <!--android:text="@string/rupiah"/>-->
+
+                        <TextView
+                            android:id="@+id/text_discount_string"
+                            style="@style/Booking2PriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_biaya_tambahan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_biaya_tambahan"
+                            style="@style/Booking2LayoutSubtitleDarkGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/biaya_tambahan" />
+
+                        <!--<TextView-->
+                        <!--style="@style/Booking2RupiahText"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignBaseline="@id/text_biaya_tambahan_string"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_marginEnd="@dimen/_95dp"-->
+                        <!--android:text="@string/rupiah"/>-->
+
+                        <TextView
+                            android:id="@+id/text_biaya_tambahan_string"
+                            style="@style/Booking2PriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="5.000" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/booking_divider"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:background="@color/line_light_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_total"
+                            style="@style/Booking2LayoutSubtitleDarkGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/booking_total" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@id/text_final_price"
+                            android:fontFamily="@font/trueno_regular"
+                            android:layout_marginTop="@dimen/_5dp"
+                            android:text="@string/rupiah"
+                            android:textColor="#FF828282"
+                            android:textSize="@dimen/_16sp" />
+
+                        <TextView
+                            android:id="@+id/text_final_price"
+                            style="@style/Booking2PriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/_24sp"
+                            android:text="@string/booking_price_dummy_2"
+                            android:textColor="#FFE97C0E" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text_termAndCondition"
+                        style="@style/Booking2LayoutSmallText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:layout_marginBottom="@dimen/_13dp"
+                        android:text="@string/term_and_condition"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_15dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:text="@string/pay_now"
+        android:textColor="@color/white100"
+        android:textSize="@dimen/register_button_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookSession_scrollView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

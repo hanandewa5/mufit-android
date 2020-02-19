@@ -1,0 +1,520 @@
+<resources>
+    <string name="app_name">MUFIT</string>
+    <string name="please_wait">Mohon tunggu</string>
+    <string name="default_content_desc">Default description</string>
+    <string name="welcome_sign_up">Selamat Datang, Fit People!</string>
+    <string name="email">Email</string>
+    <string name="phone">Nomor telepon</string>
+    <string name="password">Kata sandi</string>
+    <string name="confirmation_password">Konfirmasi kata sandi</string>
+    <string name="sign_up">DAFTAR</string>
+    <string name="sign_up_in_login">Daftar</string>
+    <string name="ask_mufit_account">Sudah punya akun MUFIT?\u0020</string>
+    <string name="login">Masuk</string>
+    <string name="here">&#160;disini!</string>
+    <string name="no_internet">Tidak ada koneksi internet</string>
+    <string name="email_exist">Email sudah terdaftar</string>
+    <string name="dialog_success">Sukses</string>
+
+    <string name="check_email_activate">Terima kasih telah melakukan registrasi! Langkah selanjutnya, silahkan masuk ke email Anda dan lakukan verifikasi e-mail untuk mengaktifkan akun Anda.
+        \n\n
+        Jika Anda tidak menerima notifikasi e-mail, silahkan tunggu beberapa saat atau cek folder Spam Anda.</string>
+
+    <string name="empty_form_registration">Form harus diisi</string>
+    <string name="error_try_again">Mohon coba lagi nanti</string>
+
+    <string name="tos">Terms of Service</string>
+    <string name="text_tos">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras tempor, diam eget luctus pretium, ex ante aliquam lorem, ac convallis orci nunc consectetur eros.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Etiam fermentum pretium magna ut elementum. Sed pharetra vulputate odio et gravida. Sed ut est diam.
+    Fusce nibh nulla, rutrum ac ex vitae, pellentesque euismod nisi dapibus ut. Nullam consectetur sagittis scelerisque.
+    Donec sed pretium sapien.</string>
+    <string name="agree">Setuju</string>
+    <string name="title_menu">MuHealth</string>
+    <string name="title_home">MuTrain</string>
+    <string name="title_history">Riwayat</string>
+    <string name="title_schedule">Jadwal</string>
+    <string name="title_notif">Notif</string>
+    <string name="title_login">Masuk</string>
+
+    <string name="logout">Keluar</string>
+
+    <string name="logout_message">Apakah Anda ingin keluar?</string>
+
+    <string name="welcome_text_login">Selamat Datang kembali, Fit People!</string>
+    <string name="email_phone_text_login">Email atau nomor telepon</string>
+    <string name="password_text_login">Kata sandi</string>
+    <string name="button_text_login">Masuk</string>
+    <string name="to_register_1">Belum punya akun MUFIT?</string>
+    <string name="to_register_2">Daftar</string>
+    <string name="to_register_3">disini!</string>
+    <string name="snackbar_validation_empty">Isi email/nomor telepon dan kata sandi</string>
+    <string name="login_as_admin_validation">Admin tidak bisa masuk</string>
+    <string name="to_forgot_pass_1">Lupa kata sandi?</string>
+    <string name="to_forgot_pass_2">Klik</string>
+    <string name="to_forgot_pass_3">disini</string>
+
+    <string name="forgot_pass_title">Lupa Kata Sandi?</string>
+    <string name="forgot_pass_text_1">Masukkan alamat email &amp; ketuk tombol kirim</string>
+    <string name="forgot_pass_text_2">Kami akan menghubungi melalui email segera</string>
+    <string name="edit_text_forgot_pass">Email</string>
+    <string name="button_text_forgot_pass">Kirim</string>
+    <string name="snackbar_validation_empty_forgot_pass">Mohon masukkan email</string>
+    <string name="ok">OKE</string>
+
+    <string name="rating_text">Rating</string>
+    <string name="rating">5.0</string>
+    <string name="popular">Populer</string>
+    <string name="price">Harga</string>
+    <string name="booking_now">Pesan Sesi</string>
+    <string name="booking_package">Pesan Paket</string>
+
+    <string name="see_all">See All</string>
+    <string name="hide">Hide</string>
+    <string name="edit_text_trainer_list_1">Filter berdasarkan nama pelatih</string>
+    <string name="edit_text_trainer_list_2">Filter berdasarkan tanggal</string>
+    <string name="toolbar_title_trainer_list">Search</string>
+    <string name="next">Berikutnya</string>
+    <string name="msg_must_agree_tos">You must agree to our terms of service</string>
+    <string name="filter">Filter</string>
+    <string name="gender">Gender</string>
+    <string name="man">Pria</string>
+    <string name="woman">Wanita</string>
+    <string name="man_id">M</string>
+    <string name="woman_id">F</string>
+    <string name="location">Lokasi</string>
+    <string name="jakbar">Jakarta Barat</string>
+    <string name="jaktim">Jakarta Timur</string>
+    <string name="jakpus">Jakarta Pusat</string>
+    <string name="jaksel">Jakarta Selatan</string>
+    <string name="jakut">Jakarta Utara</string>
+    <string name="categories">Program Kami</string>
+    <string name="trx_training">TRX Training</string>
+    <string name="yoga">Yoga</string>
+    <string name="personal_training">Personal Training</string>
+    <string name="zumba">Zumba</string>
+    <string name="yoga_power">Yoga Power</string>
+    <string name="pilates">Pilates</string>
+    <string name="apply">Cari</string>
+    <string name="apply_date_time">Apply Date &amp; time</string>
+    <string name="training_schedule">Jadwal Training</string>
+    <string name="password_not_match">Password tidak sama</string>
+
+
+    <string name="forgot_pass_validation_empty">Mohon isi email Anda</string>
+    <string name="forgot_pass_success">Email telah di terkirim ke email Anda</string>
+
+    <string name="fullname">Nama lengkap</string>
+    <string name="not_valid_email">Email tidak valid</string>
+    <string name="phone_validation">Telepon harus dimulai dengan \'08\' dan lebih dari 9 karakter</string>
+    <string name="invalid_password">Kata sandi minimal 8 karakter dengan alfanumerik</string>
+    <string name="empty_list_trainer">List pelatih kosong</string>
+    <string name="trainer_not_found">Oops... Trainer tidak ditemukan</string>
+
+    <string name="news_not_found">Oops... Berita tidak ditemukan</string>
+    <string name="promo_not_found">Oops... Kupon dan berita tidak ditemukan</string>
+    <string name="event_not_found">Oops... Event tidak ditemukan</string>
+
+
+    <string name="date_time"><![CDATA[Tanggal & Waktu]]></string>
+    <string name="select_shift">Pilih Waktu</string>
+    <string name="class_mufit">Kelas</string>
+    <string name="minus">-</string>
+    <string name="zero_dummy">0</string>
+    <string name="plus">+</string>
+    <string name="booking_time_dummy">17.00- 19.00</string>
+    <string name="speciality_dummy">Body Combat</string>
+    <string name="booking_price_dummy">Rp 500.000*</string>
+    <string name="exclude_tax">* Belum termasuk pajak</string>
+    <string name="booking_location_title">Lokasi training</string>
+    <string name="enter_location">Pilih lokasi training</string>
+    <string name="booking_pick_location"><u>Pilih lokasi dalam peta</u></string>
+    <string name="booking_rekening_dummy">Transfer ke BCA 527 xxx xxxx Mufit</string>
+    <string name="booking_payment_title">Pembayaran</string>
+    <string name="booking_have_voucher_code">Punya kode voucher?</string>
+    <string name="voucher_code">Kode voucher</string>
+    <string name="booking_total">Total</string>
+    <string name="booking_price_dummy_2">2.200.000</string>
+    <string name="confirm_booking">Konfirmasi Booking</string>
+    <string name="name_trainer_dummy">Alvin Armstrong</string>
+    <string name="today">Today is the day</string>
+    <string name="booking_schedule_dummy">10.00 - 12.00</string>
+    <string name="detail_trainer_text_empty_message_1">Oops... Tidak ada jadwal latihan hari ini</string>
+    <string name="detail_trainer_text_empty_message_2">Silahkan pilih tanggal lainnya</string>
+    <string name="detail_trainer">Detail Pelatih</string>
+    <string name="detail_trainer_divider_price">/ Rp \u0020</string>
+    <string name="duration">Durasi</string>
+
+    <string name="schedule_title">Detail Jadwal</string>
+
+    <string name="schedule_no_detail">Tidak ada jadwal untuk tanggal ini</string>
+    <string name="time_class_validation">Pilih waktu dan kelas yang diinginkan</string>
+    <string name="booking">Booking</string>
+    <string name="voucher_not_found">Voucher tidak valid</string>
+    <string name="voucher_found">Voucher ditemukan</string>
+    <string name="confirmation_booking">Apakah Anda ingin membuat booking?</string>
+    <string name="success_booking">Booking sukses</string>
+    <string name="choose_address">Alamat harus diisi</string>
+    <string name="join_shift">Gabungkan semua jadwal kelas tanpa waktu istirahat</string>
+    <string name="join_separate">Pisah jadwal kelas sesuai jadwal yang tersedia</string>
+    <string name="session_validation">Pilih jumlah sesi yang sesuai dengan jadwal pilihan</string>
+
+    <string name="on_going">Sedang Berlangsung</string>
+    <string name="completed">Selesai</string>
+
+    <string name="confirmation">Konfirmasi</string>
+    <string name="cancel_booking_1">Apakah Anda akan</string>
+    <string name="cancel_booking_2">membatalkan booking ini ?</string>
+    <string name="cancel_booking_3">Beritahukan alasan pembatalan Anda</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="submit_rate_review">Kirim</string>
+    <string name="submit_cancel">Batalkan</string>
+    <string name="cancel_booking_reason_empty">Mohon isi alasan pembatalan booking</string>
+    <string name="cancel_booking_success">Booking Anda berhasil di batalkan</string>
+    <string name="cancel_booking_reason_hint">Alasan pembatalan booking</string>
+
+    <string name="change_password_success">Berhasil mengubah kata sandi Anda.</string>
+
+    <string name="confirmed">Konfirmasi</string>
+    <string name="trainer_confirmation">Konfirmasi Pelatih</string>
+
+    <string name="history_booking_empty_validation">Oops... Riwayat booking Anda kosong. &#160;</string>
+
+    <string name="rate_review_toolbar_title">Rate &amp; Review </string>
+    <string name="rating_star_dummy">5.0</string>
+    <string name="review_dummy">43 Review</string>
+    <string name="rate_review_desc">Bantu tingkatkan pelayanan kami!</string>
+    <!--<string name="rate_review_desc">Bantu kami untuk meningkatkan pelayanan!</string>-->
+    <string name="hint_review_text">Berikan review Anda disini</string>
+    <string name="rate_review_success">Rating dan review telah sukses dikirim</string>
+    <string name="rate_review_validation_empty_rating_review">Dimohon untuk memberikan rating dan review Anda</string>
+    <string name="speciality_desc_dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus auctor at tellus sit amet consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam erat volutpat. Donec cursus auctor semper. Quisque sed diam et libero cursus scelerisque.
+        Ut iaculis interdum dolor, in vulputate orci elementum vitae.</string>
+
+    <string name="detail_trainer_toolbar_name">Detail Pelatih</string>
+    <string name="trainer_schedule_title">Jadwal Latihan</string>
+    <string name="day_name_dummy">Wednesday</string>
+    <string name="btn_upload_title">Upload Bukti Bayar</string>
+    <string name="btn_cancel_title">Batalkan Booking</string>
+    <string name="on_session_title">Sedang Berlangsung</string>
+    <string name="date_dummy">22/01/2018</string>
+    <string name="speciality_dummy_with_class">Body Combat Class</string>
+    <string name="booking_time_dummy_2">Booking 23/01/2018</string>
+    <string name="confirmed_title">Di konfirmasi</string>
+    <string name="shift_time_dummy">15:00 - 16:00</string>
+    <string name="unpaid_title">Belum Bayar</string>
+    <string name="canceled_title">Dibatalkan</string>
+
+    <string name="upload_success">Bukti pembayaran Anda telah sukses di kirim</string>
+    <string name="upload_failed">Upload gagal</string>
+    <string name="format_upload">Mohon gunakan format foto .img/.jpg/.jpeg/.png</string>
+
+
+    <string name="external_storage_permission">This apps need to access gallery</string>
+    <string name="allow">Allow</string>
+    <string name="denied">Denied</string>
+    <string name="paid_start_cancel_warning">Apabila Anda melakukan pembatalan booking ini, maka uang yang telah
+    Anda bayarkan tidak dapat dikembalikan</string>
+    <string name="cancel">Batal</string>
+
+    <string name="our_trainer_title">Pelatih Kami</string>
+    <string name="search_all">Lihat semua pelatih</string>
+
+    <string name="available_slot_title">Slot Tersedia</string>
+    <string name="slot_amount_dummy">80</string>
+    <string name="start_registration">Mulai Pendaftaran</string>
+    <string name="end_registration">Akhir Pendaftaran</string>
+    <string name="trainer_name_title">Nama Pelatih</string>
+    <string name="date_time_title">Tanggal &amp; Waktu</string>
+    <string name="event_details_title">Detail Event</string>
+    <string name="price_title">Harga</string>
+    <string name="price_dummy">Rp. 25.000,00</string>
+    <string name="date_time_dummy">15 February 2018, pk 12.00 en dash 14.00</string>
+
+    <string name="class_label">Kelas</string>
+
+    <string name="location_title">Lokasi</string>
+    <string name="location_dummy">"Jl. Kartika Pinang III no 26</string>
+
+    <string name="create_booking_event_question">Apakah Anda ingin melakukan booking event?</string>
+    <string name="create_booking_event_success">Booking untuk event sukses</string>
+
+    <string name="trainer">Trainer</string>
+
+    <string name="event">Event -</string>
+
+    <string name="schedule_rv_dummy">Body Combat by Armstrong</string>
+    <string name="schedule_rv_dummy_2">16:00 - 17:00</string>
+
+    <string name="permission_excuse">Need some permissions to use MUFIT </string>
+    <string name="enable_location">To continue, turn on device location, which uses Google\'s location service</string>
+
+    <string name="history_detail">Rincian Pesanan</string>
+
+    <string name="booking_id">Kode Booking</string>
+    <string name="booking_id_title">ID Booking : </string>
+    <string name="payment_uploaded">Sudah melakukan pembayaran</string>
+
+    <string name="receipt_uploaded">Sudah bayar</string>
+    <string name="duration_dummy">1 jam\u0020/\u0020sesi</string>
+
+    <string name="bank_name">BCA</string>
+    <string name="no_rekening">0038.0388.88</string>
+    <string name="nama_pemilik_rekening">(PT. Anam Selaras Abadi)</string>
+
+    <string name="email_not_valid">Format email tidak valid</string>
+    <string name="starts_from">Mulai dari</string>
+
+    <string name="history_to_list_trainer">Pesan Sekarang!</string>
+
+    <string name="apply_date">Pilih tanggal</string>
+    <string name="apply_date_time_2">Pilih tanggal &amp; waktu</string>
+
+    <string name="start_time">Waktu Mulai</string>
+    <string name="end_time">Waktu Selesai</string>
+    <string name="filter_trainer">Filter Pelatih</string>
+
+    <string name="booking_date">Tanggal Booking</string>
+    <string name="booking_code">Kode Booking</string>
+
+    <string name="status">Status</string>
+    <string name="total">Total Harga</string>
+    <string name="discount">Potongan Harga</string>
+    <string name="rupiah">Rp </string>
+    <string name="speciality">Speciality</string>
+
+    <string name="transfer_to">Transfer ke</string>
+    <string name="rekening">BCA : 0038038888</string>
+
+    <string name="login_session_end">Sesi login Anda telah habis</string>
+
+    <string name="list_trainer_speciality_desc">Kelas latihan: %1$s </string>
+    <string name="no_internet_desc">Oops... Halaman ini tidak terbuka.</string>
+    <string name="no_internet_desc_2">Silahkan periksa koneksi Anda</string>
+
+    <string name="no_internet_desc2">Oops... Halaman ini tidak bisa dibuka. Silahkan periksa koneksi Anda</string>
+
+    <string name="search_all_showcase_text">Klik disini untuk melihat daftar seluruh pelatih</string>
+    <string name="event_showcase_text">Klik disini untuk melihat Detail dari event menarik yang kami adakan</string>
+    <string name="categories_showcase_text">Lihat berbagai kategori olahraga yang kami sediakan</string>
+    <string name="history_showcase_text">Klik disini untuk melihat riwayat pemesanan Anda</string>
+    <string name="schedule_showcase_text">Klik disini untuk melihat jadwal latihan Anda</string>
+    <string name="location_showcase_text">Klik disini untuk memilih tempat latihan favoritmu</string>
+    <string name="booking_showcase_text">Pastikan pesanan Anda sesuai</string>
+    <string name="text_note_user_showcase">Tulis catatan tambahan seperti nomor rumah, nama gedung atau bahkan warna pagar agar alamat lebih jelas</string>
+    <string name="choose_payment_showcase">Pilih metode pembayaran yang Anda inginkan</string>
+    <string name="voucher_showcase_text">Klik disini untuk menggunakan kupon yg tersedia</string>
+    <string name="confirm_showcase_text">Klik disini untuk mengkonfirmasi pesanan Anda</string>
+    <string name="map_showcase_text">Pastikan alamat latihan favoritmu sesuai dengan peta</string>
+    <string name="schedule_tabs_trainer_showcase">Disini, Anda dapat melihat jadwal latihan dari pelatih kami </string>
+    <string name="profile_tabs_trainer_showcase">Cari tahu lebih tentang pelatih kami disini</string>
+    <string name="calender_view_showcase">Cari dan pilih tanggal latihan Anda</string>
+    <string name="schedule_showcase">Pilih jam latihan Anda disini</string>
+    <string name="speciality_showcase">Pilih olahraga yang Anda inginkan disini</string>
+    <string name="button_booking_showcase">Klik disini untuk pesan sesi latihanmu</string>
+    <string name="button_booking_package_showcase">Klik disini untuk pesan paket latihanmu</string>
+    <string name="sertificate_trainer_showcase">Disini adalah beberapa sertifikat dari trainer kami</string>
+    <string name="photos_trainer_showcase">Disini adalah beberapa foto kegiatan dari trainer kami</string>
+    <string name="category_speciality_showcase">Cari dan pilih olahraga kesukaanmu disini</string>
+    <string name="category_search_date_showcase">Cari dan pilih tanggal latihanmu disini</string>
+    <string name="category_togglebutton_man_showcase">Klik disini jika Anda ingin pelatih Laki-laki</string>
+    <string name="category_togglebutton_woman_showcase">Klik disini jika Anda ingin pelatih Perempuan</string>
+    <string name="category_search_trainer_showcase">Klik disini untuk mulai mencari pelatih Anda</string>
+    <string name="filter_trainer_showcase">Cari nama pelatih yang Anda inginkan disini!</string>
+    <string name="filter_date_showcase">Pilih tanggal latihanmu disini</string>
+    <string name="toolbar_filter_showcase">Ada beberapa filter pencarian tambahan juga disini!</string>
+    <string name="detai_trainer_showcase">Lihat rincian singkat pelatih kami disini!</string>
+    <string name="sesion_trainer_showcase">Ketuk disini untuk membeli sesi latihan favorit bersama pelatih kamu!</string>
+    <string name="package_trainer_showcase">Ketuk disini untuk membeli paket latihan spesial dari pelatih!</string>
+    <string name="filter_gender_showcase">Pilih gender pelatih sesuai dengan pilihamu</string>
+    <string name="filter_speciality_showcase">Pilih olahraga yang Anda inginkan disini</string>
+    <string name="filter_apply_showcase">Klik disini untuk mulai mencari</string>
+    <string name="skip">SKIP</string>
+    <string name="finish_showcase">Mulai jalankan aplikasi!</string>
+
+    <string name="faq">FAQ</string>
+    <string name="profile">Profil</string>
+    <string name="website">Website</string>
+    <string name="socmed">Media Sosial</string>
+    <string name="settings">Pengaturan</string>
+
+    <string name="language">Bahasa</string>
+    <string name="repeat_tutorial">Ulang Tutorial</string>
+
+    <string name="indonesia">Indonesia</string>
+    <string name="english">English</string>
+
+    <string name="username">Nama</string>
+    <string name="address">Alamat</string>
+    <string name="change_password">Ubah Kata Sandi</string>
+    <string name="current_password">Kata Sandi Sekarang</string>
+    <string name="new_password">Kata Sandi Baru</string>
+    <string name="confirm_new_password">Konfirmasi Kata Sandi Baru</string>
+    <string name="edit_profile">Ubah Profil</string>
+    <string name="atur_ulang">Ubah Sandi</string>
+    <string name="change_name">Ubah Nama</string>
+    <string name="change_name_hint">Nama Baru</string>
+
+    <string name="change_name_button">Ubah</string>
+    <string name="change_phone">Ubah Nomor Telepon</string>
+    <string name="change_phone_hint">Nomor Telepon Baru</string>
+
+    <string name="apply_changes">Ubah Profil</string>
+    <string name="apply_changes_for_toolbar_menu">Apakah Anda yakin akan mengubah data profil ?</string>
+    <string name="apply_changes_for_toolbar_menu_denied">Anda belum mengubah data profil</string>
+    <string name="edit_profile_success">Profil Anda berhasil diubah</string>
+    <string name="edit_pass_success">Kata Sandi Anda berhasil diubah</string>
+    <string name="edit_pass_empty_validation">Mohon isi kata sandi sekarang, kata sandi baru, dan konfirmasi kata sandi
+    </string>
+
+    <string name="voucher_details_title">Detail Voucher</string>
+    <string name="voucher_details_code_title">Kode Voucher</string>
+    <string name="copy_code">Salin kode</string>
+    <string name="voucher_details_btn_text">Pesan Sekarang</string>
+
+    <string name="ads_detail_title">Detail Iklan</string>
+    <string name="ads_name_title">Informasi</string>
+    <string name="advertisement">Iklan</string>
+
+    <string name="voucher_toolbar_title">Voucher</string>
+    <string name="choose_total_booking">Jumlah sesi yang dapat dipilih:\u0020</string>
+
+    <string name="time_filter_validation">Rentang waktu harus 1 jam</string>
+    <string name="payment_desc_hint">Deskripsi bukti pembayaran</string>
+    <string name="cancel_payment">Batalkan</string>
+    <string name="btn_bayar">Bayar</string>
+    <string name="choose_payment_method">Pilih Metode Pembayaran</string>
+    <string name="dummy_text_payment_method">Bank Transfer</string>
+    <string name="service_fee">Biaya Layanan</string>
+    <string name="error_validate_payment_method">Silahkan pilih metode pembayaran untuk melanjutkan</string>
+
+    <string name="my_voucher">Kupon Saya</string>
+    <string name="my_voucher_applied">Kupon Diterapkan</string>
+    <string name="input_voucher_code">Masukkan kode voucher</string>
+    <string name="choose_voucher">Pilih kupon</string>
+    <string name="use_vocher">PAKAI</string>
+    <string name="please_select_voucher_to_use">Anda belum memilih voucher</string>
+    <string name="voucher_choosen_not_match">Voucher yang aktif tidak sesuai dengan kelas yang Anda pilih</string>
+    <string name="voucher_not_valid">Voucher tidak ditemukan, Masukkan kode yang tepat atau hapus kode untuk melanjutkan</string>
+
+    <string name="package_title">Paket</string>
+    <string name="select_class">Pilih kelas</string>
+    <string name="select_package">Pilih paket</string>
+    <string name="package_5x_dec">** Dapat 10% diskon sesi dengan 20 hari masa berlaku</string>
+    <string name="package_10x_dec">** Dapat 20% diskon sesi dengan 40 hari masa berlaku</string>
+
+    <string name="toogle_schedule">Jadwal</string>
+    <string name="toogle_profile">Profile</string>
+    <string name="term_and_condition">Dengan melanjutkan, Anda telah menyetujui <a href="https://mufit.id/page/terms.html">Syarat &amp; Ketentuan</a></string>
+    <string name="order_detail">Rincian Pesanan</string>
+    <string name="order_detail_date">Tanggal</string>
+    <string name="order_detail_shift">Jam Kerja</string>
+    <string name="order_detail_class">Kelas</string>
+    <string name="booking_note_user">Catatan</string>
+    <string name="booking_voucher_title1">Kupon</string>
+    <string name="booking_price">Harga</string>
+    <string name="booking_discount">Potongan Harga</string>
+    <string name="error_detail_trainer_speciality">Silahkan pilih kelas yang ingin di ikuti terlebih dahulu</string>
+    <string name="error_detail_trainer_schedule">Silahkan pilih waktu latihan terlebih dahulu</string>
+    <string name="detail_trainer_speciality_equipment">Perlengkapan: %1$s</string>
+    <string name="detail_trainer_speciality_max_people">Kapasitas peserta: %1$s</string>
+    <string name="myvoucher_not_found">Oops... Kupon tidak ditemukan</string>
+    <string name="biaya_tambahan">Biaya Layanan</string>
+    <string name="choose_time">Pilih jam</string>
+    <string name="choose_class">Pilih kelas</string>
+    <string name="history_detail_date_and_time">Tanggal dan Waktu</string>
+    <string name="voucher_code_placeholder">MUFIT123</string>
+    <string name="history_detail_voucher_label">Kode Voucher</string>
+    <string name="booking_event">Booking Event</string>
+    <string name="filter_label">Filter:</string>
+    <string name="button_ok">OK</string>
+    <string name="profile_pic_image_src">Pilih gambar dari</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="button_no">TIDAK</string>
+    <string name="button_yes">YA</string>
+    <string name="dialog_unsaved_changes_part2">Apakah Anda ingin membuangnya?</string>
+    <string name="dialog_unsaved_changes_part1">Perubahan profil Anda belum disimpan.</string>
+    <string name="error">Error</string>
+
+    
+    <string name="text_voucher_code">Kode Voucher</string>
+    <string name="voucher_value">Nominal</string>
+    <string name="available">Tersedia %1$d / %2$d</string>
+    <string name="single_voucher">Hanya untuk sekali pakai</string>
+
+    <string name="until">Sampai %1$s</string>
+
+    <string name="cancel_voucher_then_return">Batalkan penggunaan voucher dan kembali ke halaman Voucher Saya?</string>
+
+    <string-array name="schedule_calendar_custom_weekdays">
+        <item>M</item>
+        <item>S</item>
+        <item>S</item>
+        <item>R</item>
+        <item>K</item>
+        <item>J</item>
+        <item>S</item>
+    </string-array>
+    <string name="maps_failed">Failed to load Maps</string>
+    <string name="schedule">Jadwal</string>
+    <string name="fragment_profile_empty_text">Sesuatu yang keren akan segera datang!</string>
+
+    <string name="edit_text_search_home">Cari pelatih, kelas atau kata kunci</string>
+    <string name="home_menu_trainer">Pelatih</string>
+    <string name="home_menu_mufitEvent">Mufit Event</string>
+    <string name="home_menu_newsPromo">Berita &amp; Promosi</string>
+    <string name="home_categories_group_exercies">Latihan grup</string>
+    <string name="home_categories_kid_exercies">Latihan anak-anak</string>
+    <string name="home_categories_personal_trainer">Latihan sendiri</string>
+    <string name="home_whathotTitle">Berita terbaru</string>
+    <string name="subcategories_date_time_prompt">Kapan Anda ingin latihan?</string>
+    <string name="double_back_to_exit">Tekan sekali lagi untuk keluar</string>
+    <string name="body_composition">Body Composition Details</string>
+    <string name="promo_and_voucher"><![CDATA[Promo & Voucher]]></string>
+    <string name="subcategory_next_step">Keren! Ayo ke tahap selanjutnya!</string>
+    <string name="subcategory_personalise_your_training">Atur latihan sesuai keinginan Anda dibawah ini</string>
+    <string name="subcategory_select_trainer_gender"> Pilih gender Trainer pilihanmu</string>
+    <string name="home_welcome">Selamat datang, </string>
+    <string name="guest">Tamu</string>
+    <string name="clear_voucher_code">Clear voucher code</string>
+    <string name="search_trainer">Cari Pelatih</string>
+    <string name="fragment_profile_stay_tuned">Pelatih kami sedang mempersiapkan sesuatu yang keren. Segera di MUFIT!</string>
+
+    <string name="history_detail_cancel_booking_hint">Alasan (min. 20 chars)</string>
+    <string name="history_detail_cancel_booking_validation_message">Alasan pembatalan di bawah 20 huruf</string>
+    <string name="history_detail_cancel_booking_title">Batalkan Booking</string>
+    <string name="history_detail_cancel_booking_prompt">Tolong beritahu kami alasannya agar pelayanan kami semakin baik! </string>
+    <string name="book_package_expiry_date">"** %1$d sesi dengan %2$d hari masa berlaku"</string>
+    <string name="error_server_internal_error">Gagal memroses permintaan anda. Mohon coba lagi. (500)</string>
+    <string name="error_service_not_available">Kami sedang melakukan maintenance. Mohon untuk mencoba lagi nanti. (503)</string>
+    <string name="error_unknown_error">Terjadi gangguan tidak terduga. (%1$d)</string>
+    <string name="detail_trainer_speciality_no_equipment"> N/A</string>
+    <string name="check_body_composition_history">Cek Riwayat Penimbangan</string>
+    <string name="training_location">Lokasi Latihan</string>
+    <string name="voucher">Voucher</string>
+    <string name="voucher_code_copied">Kode voucher telah disalin</string>
+    <string name="validity_period">Masa Berlaku</string>
+    <string name="format_event_date">%1$s, %2$s - %3$s</string>
+    <string name="repeat_tutorial_confirmation">Maukah Anda mengulang tutorial?</string>
+    <string name="notice">Pemberitahuan</string>
+    <string name="session_has_expired_prompt">Maaf, sesi Anda telah berakhir. Mohon untuk lakukan login kembali.</string>
+    <string name="rate_review_validation_empty_rating">Dimohon untuk memberikan rating Anda</string>
+    <string name="rate_review_validation_empty_review">Dimohon untuk memberikan review Anda</string>
+    <string name="schedule_session_information_placeholder">Body Combat by Armstrong</string>
+    <string name="schedule_session_time_placeholder">11.00 - 12.00</string>
+    <string name="schedule_session_description_placeholder">Lorem ipsum dolor sit amet</string>
+    <string name="body_weight">Berat badan</string>
+    <string name="height">Tinggi</string>
+    <string name="submit">Kirim</string>
+    <string name="validation_onboarding_empty">Anda belum mengisi tinggi dan berat badan Anda</string>
+    <string name="onboarding_success">Sukses menyimpan informasi Anda!</string>
+    <string name="onboarding">Onboarding</string>
+    <string name="muhealth_welcome">Selamat datang ke MuHealth!</string>
+    <string name="muhealth_prompt_enter_information">Untuk mulai menggunakan MuHealth, kami membutuhkan informasi berikut:</string>
+
+</resources>

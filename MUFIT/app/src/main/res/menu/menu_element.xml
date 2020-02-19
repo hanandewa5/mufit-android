@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/profile_icon"
+        android:title="@string/profile"/>
+
+    <item
+        android:icon="@drawable/website_icon"
+        android:title="@string/website"/>
+
+    <item
+        android:icon="@drawable/socmed_icon"
+        android:title="@string/socmed"/>
+
+    <item
+        android:icon="@drawable/faq_icon"
+        android:title="@string/faq"/>
+
+    <item
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings"/>
+
+    <item
+        android:icon="@drawable/logout_icon"
+        android:title="@string/logout" />
+
+</menu>

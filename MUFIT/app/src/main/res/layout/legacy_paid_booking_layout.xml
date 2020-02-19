@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Receipt"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_toStartOf="@+id/text_dateReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event"
+                    android:textColor="@color/black100"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/history_booking_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/text_titleEventReceipt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receipt_uploaded"
+                    android:textColor="@color/black100"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/history_booking_title"
+                    android:layout_toEndOf="@+id/text_titleEventReceipt"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/text_titleReceipt"/>
+
+            </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_color_2"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/history_booking_date"
+                    android:id="@+id/text_dateReceipt"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_trainerReceipt"
+                    android:layout_width="50dp"
+                    android:src="@drawable/trainer_icon"
+                    android:layout_height="50dp"
+                    android:elevation="10dp"
+                    android:layout_marginStart="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_idReceipt"
+                        android:textSize="@dimen/history_booking_trainer_name_rate"
+                        android:textColor="@color/font_color_1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_trainerNameReceipt"
+                        android:textSize="@dimen/history_booking_trainer_name_rate"
+                        android:textColor="@color/font_color_1"/>
+
+                    <TextView
+                        android:id="@+id/text_specialityReceipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textSize="@dimen/history_booking_speciality_shift"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/price_color"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_dynamicReceipt"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

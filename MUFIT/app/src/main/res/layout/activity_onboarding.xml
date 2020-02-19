@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/onboarding_toolbar"
+        style="@style/MufitToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/onboarding" 
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/onboarding_toolbar"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_20dp">
+
+        <ImageView
+            android:id="@+id/logo_mufit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_90dp"
+            android:contentDescription="@string/default_content_desc"
+            android:src="@drawable/mufit_red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:text="@string/muhealth_welcome"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/muhealth_prompt_enter_information" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/onboarding_etWeight"
+                    style="@style/EditTextWithUnderline"
+                    android:hint="@string/body_weight"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/onboarding_labelWeightKg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_toEndOf="@id/onboarding_etWeight"
+                    android:fontFamily="@font/trueno_regular"
+                    android:text="kg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/onboarding_etHeight"
+                    style="@style/EditTextWithUnderline"
+                    android:hint="@string/height"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/onboarding_labelHeightCm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:layout_toEndOf="@id/onboarding_etHeight"
+                    android:fontFamily="@font/trueno_regular"
+                    android:text="cm" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/onboarding_btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:background="@drawable/button_background_orange"
+            android:fontFamily="@font/trueno_medium"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

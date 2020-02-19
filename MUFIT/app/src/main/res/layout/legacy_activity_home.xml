@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomsheet"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar_loading"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/legacy_element_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mufit_red_gradient"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+                <ImageView
+                    android:contentDescription="@string/default_content_desc"
+                    android:layout_width="@dimen/toolbar_mufit_logo_size"
+                    android:layout_height="@dimen/toolbar_mufit_logo_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mufit_white" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/navigation"
+            android:layout_below="@id/appbar_layout">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/layout_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:layout_below="@id/appbar_layout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<android.support.v7.widget.CardView-->
+                        <!--android:id="@+id/card_HomeKeywords"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="45dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:elevation="5dp"-->
+                        <!--android:focusableInTouchMode="true"-->
+                        <!--android:layout_marginStart="10dp"-->
+                        <!--android:layout_marginEnd="10dp">-->
+
+                        <!--<EditText-->
+                            <!--android:inputType="text"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:textSize="@dimen/list_trainer_font"-->
+                            <!--android:background="@android:color/transparent"-->
+                            <!--android:id="@+id/et_Keywords"-->
+                            <!--android:textColor="@color/edit_text_hint_color"-->
+                            <!--android:hint="@string/edit_text_trainer_list_1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent" />-->
+
+                    <!--</android.support.v7.widget.CardView>-->
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pager_RunningEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_145dp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_eventSliderIndicator"
+                        android:layout_above="@+id/layout_ourTrainerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/event_slider_indicator_margin"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_myVoucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_below="@id/pager_RunningEvent"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:background="@drawable/myvoucher_background"
+                        android:layout_marginEnd="@dimen/_9dp"
+                        android:elevation="@dimen/_3dp"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/button_my_voucher"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50dp"
+                            android:background="@android:color/transparent"/>
+
+                        <TextView
+                            android:id="@+id/text_myVoucherTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_15dp"
+                            android:gravity="center"
+                            android:text="@string/my_voucher"
+                            android:textColor="@color/white100"
+                            android:textSize="@dimen/_16sp"
+                            android:fontFamily="@font/trueno_regular"/>
+
+                        <TextView
+                            android:id="@+id/text_myVoucherAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_15dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white100"
+                            android:textSize="@dimen/_16sp"
+                            android:fontFamily="@font/trueno_regular" />
+
+                        <ImageView
+                            android:id="@+id/image_myVoucher"
+                            android:layout_width="@dimen/_32dp"
+                            android:layout_height="@dimen/_19dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_38dp"
+                            android:src="@drawable/image_myvoucher" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_ourTrainerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_myVoucher"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:layout_marginTop="@dimen/_20dp">
+
+                        <TextView
+                            android:id="@+id/text_ourTrainerTitle"
+                            style="@style/HomeTextViewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/our_trainer_title"/>
+
+                        <TextView
+                            android:id="@+id/text_searchAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_10dp"
+                            android:text="@string/search_all"
+                            android:fontFamily="@font/trueno_regular"
+                            android:textColor="#FF4A4A4A"
+                            android:textSize="@dimen/_12sp" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_ourTrainer"
+                        android:layout_below="@+id/layout_ourTrainerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:overScrollMode="never"/>
+
+                    <TextView
+                        android:id="@+id/text_categoriesTitle"
+                        style="@style/HomeTextViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/categories"
+                        android:layout_below="@+id/rv_ourTrainer"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:layout_marginTop="@dimen/_10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_Categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_categoriesTitle"
+                        android:layout_marginStart="@dimen/_6dp"
+                        android:layout_marginTop="@dimen/_3dp"
+                        android:layout_marginEnd="@dimen/_6dp"
+                        android:overScrollMode="never" />
+                </RelativeLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                android:src="@drawable/no_connection_icon"/>
+
+            <TextView
+                android:id="@+id/text_noInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14sp"
+                android:text="@string/no_internet_desc"/>
+
+            <TextView
+                android:id="@+id/text_noInternet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:textSize="@dimen/_14sp"
+                android:textAlignment="center"
+                android:text="@string/no_internet_desc_2"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.flipboard.bottomsheet.BottomSheetLayout>

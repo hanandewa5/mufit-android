@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_list_payment_method"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_payment_method"
+        style="@style/Booking2LayoutSubtitleDarkGrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text_payment_method"/>
+
+    <TextView
+        android:id="@+id/label_service_fee"
+        style="@style/Booking2LayoutSmallText"
+        android:textSize="@dimen/_8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text_payment_method" />
+</LinearLayout>

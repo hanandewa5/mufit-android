@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mufit_red_gradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/home_menu_newsPromo"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout_news_promo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+            <include layout="@layout/adapter_preload_shimmer" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_whatshot"
+                style="@style/HomeTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_whathotTitle"
+                android:layout_marginStart="@dimen/news_promo_margin_horizontal"
+                android:layout_marginTop="@dimen/news_promo_margin_horizontal"
+                android:layout_marginEnd="@dimen/news_promo_margin_horizontal"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hotnews"
+                android:paddingStart="@dimen/news_promo_margin_horizontal"
+                android:paddingEnd="@dimen/news_promo_margin_horizontal"
+                android:paddingTop="@dimen/news_promo_margin_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/text_promo"
+                style="@style/HomeTextViewTitle"
+                android:layout_marginStart="@dimen/news_promo_margin_horizontal"
+                android:layout_marginTop="@dimen/news_promo_margin_horizontal"
+                android:layout_marginEnd="@dimen/news_promo_margin_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/promo_and_voucher"/>
+
+            <LinearLayout
+                android:id="@+id/layout_empty_promo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_60dp"
+                android:paddingEnd="@dimen/_60dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/no_schedule_icon" />
+
+                <TextView
+                    android:id="@+id/text_Empty_promo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/trueno_regular"
+                    android:text="@string/promo_not_found"
+                    android:textSize="@dimen/_16sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_news_promo"
+                android:paddingTop="@dimen/_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/image_receipt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <EditText
+        android:id="@+id/text_paymentDesc"
+        android:gravity="center"
+        android:hint="@string/payment_desc_hint"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:textColor="@color/black100"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/image_receipt"/>
+
+    <Button
+        android:id="@+id/btn_uploadPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/btn_upload_title"
+        android:textSize="17sp"
+        android:textColor="@color/white100"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:layout_below="@id/text_paymentDesc"
+        android:background="@drawable/button_background_orange"/>
+
+    <Button
+        android:id="@+id/btn_cancelPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btn_uploadPayment"
+        android:text="@string/cancel_payment"
+        android:textSize="17sp"
+        android:textColor="@color/white100"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:background="@drawable/button_background_blue"/>
+
+
+</RelativeLayout>

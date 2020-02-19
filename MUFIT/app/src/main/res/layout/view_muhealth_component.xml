@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/_3dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_5dp"
+    android:layout_marginTop="@dimen/_5dp"
+    android:layout_marginBottom="@dimen/_5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/muhealthContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp">
+
+        <ImageView
+            android:id="@+id/muhealthComponent_icon"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:padding="@dimen/_5dp"
+            android:src="@drawable/ic_scale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/muhealthComponent_textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:fontFamily="@font/trueno_light"
+            android:text="Title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toEndOf="@id/muhealthComponent_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/muhealthComponent_textValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_regular"
+            android:text="Value"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@id/muhealthComponent_textTitle"
+            app:layout_constraintTop_toBottomOf="@id/muhealthComponent_textTitle" />
+
+        <ImageButton
+            android:id="@+id/muhealthComponent_btnShowDetail"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_25dp"
+            android:padding="0dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:tint="@color/grey"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/muhealthComponent_textValueChange"
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_regular"
+            android:text="1,216"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/muhealthComponent_btnShowDetail" />
+
+        <ImageView
+            android:id="@+id/muhealthComponent_iconChangeIndicator"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_increase"
+            app:layout_constraintBottom_toBottomOf="@id/muhealthComponent_textValueChange"
+            app:layout_constraintEnd_toStartOf="@id/muhealthComponent_textValueChange"
+            app:layout_constraintTop_toTopOf="@id/muhealthComponent_textValueChange" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

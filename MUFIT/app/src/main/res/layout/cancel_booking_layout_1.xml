@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background_style"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/text_confirmation_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/confirmation"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textColor="@color/black54"
+        android:layout_marginTop="@dimen/cancel_booking_popup_title_margin_top"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black38"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/text_cancel_booking1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_booking_1"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        android:textColor="@color/price_color"/>
+
+    <TextView
+        android:id="@+id/text_cancel_booking2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/price_color"
+        android:text="@string/cancel_booking_2"
+        android:layout_gravity="center"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp">
+        
+        <Button
+            style="?android:attr/buttonBarStyle"
+            android:id="@+id/btn_no_cancel"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background_blue"
+            android:text="@string/no"
+            android:textAllCaps="true"
+            android:textColor="@color/white100"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Button
+            style="?android:attr/buttonBarStyle"
+            android:id="@+id/btn_yes_cancel"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background_orange"
+            android:text="@string/yes"
+            android:textAllCaps="true"
+            android:textColor="@color/white100"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
+        
+    </LinearLayout>
+
+</LinearLayout>

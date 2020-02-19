@@ -1,0 +1,131 @@
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/layout_parentOnGoing"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/progressBar_loading"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/layout_noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:src="@drawable/no_connection_icon"/>
+
+        <TextView
+            android:id="@+id/text_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/no_internet_desc2"/>
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout_ongoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/adapter_preload_history" />
+
+            <include layout="@layout/adapter_preload_history" />
+
+            <include layout="@layout/adapter_preload_history" />
+
+            <include layout="@layout/adapter_preload_history" />
+
+            <include layout="@layout/adapter_preload_history" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_Ongoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:id="@+id/rvOngoingBooking"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layout_empty"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/empty_logoOngoing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/default_content_desc"
+            android:src="@drawable/logo_grey" />
+
+        <TextView
+            android:id="@+id/text_historyOngoingEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/trueno_regular"
+            android:text="@string/history_booking_empty_validation"
+            android:textSize="@dimen/_14sp"/>
+
+        <Button
+            android:id="@+id/btn_ongoingToListTrainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:textColor="@color/white100"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_background_blue"
+            android:text="@string/history_to_list_trainer"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

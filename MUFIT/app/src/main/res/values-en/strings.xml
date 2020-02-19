@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">MUFIT</string>
+    <string name="please_wait">Please wait</string>
+    <string name="default_content_desc">Default description</string>
+    <string name="welcome_sign_up">Welcome, Fit People!</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirmation_password">Confirm Password</string>
+    <string name="sign_up">REGISTER</string>
+    <string name="sign_up_in_login">Sign Up</string>
+    <string name="ask_mufit_account">Already have a MUFIT account?\\u0020</string>
+    <string name="login">Login</string>
+    <string name="here">&#160;here!</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="email_exist">Email already registered</string>
+    <string name="dialog_success">Success</string>
+
+    <string name="check_email_activate">Thank you for registering! Next, please check your email account and verify your email address to activate your account.
+        \n\n
+        If you have not received an email from us, please wait for a few moments or check your Spam folder.</string>
+
+    <string name="empty_form_registration">Please fill in the form</string>
+    <string name="error_try_again">Please try again later</string>
+
+    <string name="tos">Terms of Service</string>
+    <string name="text_tos">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras tempor, diam eget luctus pretium, ex ante aliquam lorem, ac convallis orci nunc consectetur eros.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    Etiam fermentum pretium magna ut elementum. Sed pharetra vulputate odio et gravida. Sed ut est diam.
+    Fusce nibh nulla, rutrum ac ex vitae, pellentesque euismod nisi dapibus ut. Nullam consectetur sagittis scelerisque.
+    Donec sed pretium sapien.</string>
+    <string name="agree">Agree</string>
+    <string name="title_menu">MuHealth</string>
+    <string name="title_home">MuTrain</string>
+    <string name="title_history">History</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_notif">Notif</string>
+    <string name="title_login">Login</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="logout_message">Are you sure want to log out?</string>
+
+    <string name="welcome_text_login">Welcome Back, Fit People!</string>
+    <string name="email_phone_text_login">Email or phone number</string>
+    <string name="password_text_login">Password</string>
+    <string name="button_text_login">Login</string>
+    <string name="to_register_1">Don\'t have a MUFIT account?</string>
+    <string name="to_register_2">Sign Up</string>
+    <string name="to_register_3">here!</string>
+    <string name="snackbar_validation_empty">Insert email/phone number and password</string>
+    <string name="login_as_admin_validation">Admin cannot login</string>
+    <string name="to_forgot_pass_1">Forgot your Password?</string>
+    <string name="to_forgot_pass_2">Click</string>
+    <string name="to_forgot_pass_3">here</string>
+
+    <string name="forgot_pass_title">Forgot Password?</string>
+    <string name="forgot_pass_text_1">Insert your email &amp; click request button</string>
+    <string name="forgot_pass_text_2">We will contact you via email shortly!</string>
+    <string name="edit_text_forgot_pass">Email</string>
+    <string name="button_text_forgot_pass">Request</string>
+    <string name="snackbar_validation_empty_forgot_pass">Please enter your email</string>
+    <string name="ok">OK</string>
+
+    <string name="rating_text">Rating</string>
+    <string name="rating">5.0</string>
+    <string name="popular">Popular</string>
+    <string name="price">Price</string>
+    <string name="booking_now">Booking Session</string>
+    <string name="booking_package">Booking Package</string>
+
+    <string name="news_not_found">Oops... There are no news available</string>
+    <string name="promo_not_found">Oops... There are no voucher and news available</string>
+    <string name="event_not_found">Oops... There are no events available</string>
+
+    <string name="see_all">See All</string>
+    <string name="hide">Hide</string>
+    <string name="edit_text_trainer_list_1">Filter by trainer name</string>
+    <string name="edit_text_trainer_list_2">Filter by date</string>
+    <string name="toolbar_title_trainer_list">Search</string>
+    <string name="next">Next</string>
+    <string name="msg_must_agree_tos">You must agree to our terms of service</string>
+    <string name="filter">Filter</string>
+    <string name="gender">Gender</string>
+    <string name="man">Male</string>
+    <string name="woman">Female</string>
+    <string name="man_id">M</string>
+    <string name="woman_id">F</string>
+
+    <string name="location">Location</string>
+    <string name="jakbar">Jakarta Barat</string>
+    <string name="jaktim">Jakarta Timur</string>
+    <string name="jakpus">Jakarta Pusat</string>
+    <string name="jaksel">Jakarta Selatan</string>
+    <string name="jakut">Jakarta Utara</string>
+    <string name="categories">Categories</string>
+    <string name="trx_training">TRX Training</string>
+    <string name="yoga">Yoga</string>
+    <string name="personal_training">Personal Training</string>
+    <string name="zumba">Zumba</string>
+    <string name="yoga_power">Yoga Power</string>
+    <string name="pilates">Pilates</string>
+    <string name="apply">Apply</string>
+    <string name="apply_date_time">Apply Date &amp; time</string>
+    <string name="training_schedule">Training Schedule</string>
+    <string name="password_not_match">Password does not match</string>
+
+    <string name="change_password_success">Successfully changed your password.</string>
+
+    <string name="forgot_pass_validation_empty">Please insert your email</string>
+    <string name="forgot_pass_success">Email is successfully sent to your email</string>
+
+    <string name="fullname">Full Name</string>
+    <string name="not_valid_email">Email is not valid</string>
+    <string name="phone_validation">Phone number must begin with \'08\' and more than 9 characters</string>
+    <string name="invalid_password">Password must be 8 characters and alphanumeric</string>
+    <string name="empty_list_trainer">List of trainers is empty</string>
+    <string name="trainer_not_found">Oops... Trainer is not found</string>
+
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="select_shift">Select shift</string>
+    <string name="class_mufit">Class</string>
+    <string name="minus">-</string>
+    <string name="zero_dummy">0</string>
+    <string name="plus">+</string>
+    <string name="booking_time_dummy">17.00- 19.00</string>
+    <string name="speciality_dummy">Body Combat</string>
+    <string name="booking_price_dummy">Rp 500.000*</string>
+    <string name="exclude_tax">* Exclude tax</string>
+    <string name="booking_location_title">Location</string>
+    <string name="enter_location">Insert location</string>
+    <string name="booking_pick_location"><u>Choose location from map</u></string>
+    <string name="booking_rekening_dummy">Transfer to BCA 527 xxx xxxx Mufit</string>
+    <string name="booking_payment_title">Payment</string>
+    <string name="booking_have_voucher_code">Have voucher code?</string>
+    <string name="voucher_code">Voucher code</string>
+    <string name="booking_total">Total</string>
+    <string name="booking_price_dummy_2">Rp 2.200.000</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="name_trainer_dummy">Alvin Armstrong</string>
+    <string name="today">Today is the day</string>
+    <string name="booking_schedule_dummy">10.00 - 12.00</string>
+    <string name="detail_trainer_text_empty_message_1">Oops...There is no training schedule this day</string>
+    <string name="detail_trainer_text_empty_message_2">Please choose the other date</string>
+    <string name="detail_trainer">Detail Trainer</string>
+    <string name="detail_trainer_divider_price">/ Rp \u0020</string>
+    <string name="duration">Durasi</string>
+
+    <string name="schedule_title">Detail Schedule</string>
+
+    <string name="schedule_no_detail">There is no schedule for this day</string>
+    <string name="time_class_validation">Please select time and class</string>
+    <string name="booking">Booking</string>
+    <string name="voucher_not_found">Voucher not valid</string>
+    <string name="voucher_found">Voucher found</string>
+    <string name="confirmation_booking">Do you want to make a booking?</string>
+    <string name="success_booking">Booking success</string>
+    <string name="choose_address">Address must be filled</string>
+    <string name="join_shift">Join all shift without break time</string>
+    <string name="join_separate">Separate shifts base on schedule</string>
+    <string name="session_validation">Select sessions according to the selected shift</string>
+
+    <string name="on_going">On Going</string>
+    <string name="completed">Completed</string>
+
+    <string name="confirmation">Confirmation</string>
+    <string name="cancel_booking_1">Do you want to</string>
+    <string name="cancel_booking_2">cancel your booking ?</string>
+    <string name="cancel_booking_3">Tell us the reason to improve our service!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="submit_rate_review">Submit</string>
+    <string name="submit_cancel">Submit</string>
+    <string name="cancel_booking_reason_empty">Please insert your cancellation reason</string>
+    <string name="cancel_booking_success">Order cancelled successfully</string>
+    <string name="cancel_booking_reason_hint">Cancellation reason</string>
+
+    <string name="confirmed">Confirmed</string>
+    <string name="trainer_confirmation">Trainer Confirmation</string>
+
+    <string name="history_booking_empty_validation">Oops... Your history booking is empty.</string>
+
+    <string name="rate_review_toolbar_title">Rate &amp; Review </string>
+    <string name="rating_star_dummy">5.0</string>
+    <string name="review_dummy">43 Review</string>
+    <string name="rate_review_desc">Help us to improve our service !</string>
+    <string name="hint_review_text">Give your review here</string>
+    <string name="rate_review_success">Rate and review is successfully sent</string>
+    <string name="rate_review_validation_empty_rating_review">Please kindly leave your rating and review.</string>
+    <string name="speciality_desc_dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus auctor at tellus sit amet consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam erat volutpat. Donec cursus auctor semper. Quisque sed diam et libero cursus scelerisque.
+        Ut iaculis interdum dolor, in vulputate orci elementum vitae.</string>
+
+    <string name="detail_trainer_toolbar_name">Detail Trainer</string>
+    <string name="trainer_schedule_title">Training Schedule</string>
+    <string name="day_name_dummy">Wednesday</string>
+    <string name="btn_upload_title">Upload Payment Receipt</string>
+    <string name="btn_cancel_title">Cancel Booking</string>
+    <string name="on_session_title">On Session</string>
+    <string name="date_dummy">22/01/2018</string>
+    <string name="speciality_dummy_with_class">Body Combat Class</string>
+    <string name="booking_time_dummy_2">Booking 23/01/2018</string>
+    <string name="confirmed_title">Confirmed</string>
+    <string name="shift_time_dummy">15:00 - 16:00</string>
+    <string name="unpaid_title">Unpaid</string>
+    <string name="canceled_title">Canceled</string>
+
+    <string name="upload_success">Your payment receipt is successfully uploaded</string>
+    <string name="upload_failed">Upload failed</string>
+    <string name="format_upload">Please use .img/.jpg/.jpeg/.png photo format</string>
+
+    <string name="fragment_profile_empty_text">Something awesome is coming soon!</string>
+
+    <string name="external_storage_permission">This apps need to access gallery</string>
+    <string name="allow">Allow</string>
+    <string name="denied">Denied</string>
+    <string name="paid_start_cancel_warning">If you cancel this booking, your money will not be returned</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="our_trainer_title">Star Trainers</string>
+    <string name="search_all">See all</string>
+
+    <string name="available_slot_title">Available Slots</string>
+    <string name="slot_amount_dummy">80</string>
+    <string name="start_registration">Start Registration</string>
+    <string name="end_registration">End Registration</string>
+    <string name="trainer_name_title">Trainer Name</string>
+    <string name="date_time_title">Date &amp; Time</string>
+    <string name="event_details_title">Event Details</string>
+    <string name="price_title">Price</string>
+    <string name="price_dummy">Rp. 25.000,00</string>
+    <string name="date_time_dummy">15 February 2018, pk 12.00 en dash 14.00</string>
+
+    <string name="class_label">Class</string>
+
+    <string name="location_title">Location</string>
+    <string name="location_dummy">"Jl. Kartika Pinang III no 26</string>
+
+    <string name="create_booking_event_question">Are you sure want to book this event ?</string>
+    <string name="create_booking_event_success">Event booking success</string>
+    <string name="maps_failed">Failed to load Maps</string>
+
+
+    <string name="event">Event -</string>
+
+    <string name="schedule_rv_dummy">Body Combat by Armstrong</string>
+    <string name="schedule_rv_dummy_2">16:00 - 17:00</string>
+
+    <string name="permission_excuse">Need some permissions to use MUFIT </string>
+    <string name="enable_location">To continue, turn on device location, which uses Google\'s location service</string>
+
+    <string name="history_detail">History</string>
+
+    <string name="booking_id">Booking Code</string>
+    <string name="booking_id_title">Booking ID : </string>
+    <string name="payment_uploaded">Payment Uploaded</string>
+
+    <string name="receipt_uploaded">Receipt Uploaded</string>
+    <string name="duration_dummy">1 hour\u0020/\u0020session</string>
+
+    <string name="bank_name">BCA</string>
+    <string name="no_rekening">0038.0388.88</string>
+    <string name="nama_pemilik_rekening">(PT. Anam Selaras Abadi)</string>
+
+    <string name="email_not_valid">Email format is not valid</string>
+    <string name="starts_from">Starts from</string>
+
+    <string name="history_to_list_trainer">Book Now!</string>
+
+    <string name="apply_date">Choose Date</string>
+    <string name="apply_date_time_2">Choose date &amp; time</string>
+
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="filter_trainer">Filter Trainer</string>
+
+    <string name="booking_date">Booking Date</string>
+    <string name="booking_code">Booking Code</string>
+
+    <string name="status">Status</string>
+    <string name="total">Total</string>
+    <string name="discount">Discount</string>
+    <string name="rupiah">Rp </string>
+    <string name="speciality">Speciality</string>
+
+    <string name="transfer_to">Transfer to</string>
+    <string name="rekening">BCA : 0038038888</string>
+
+    <string name="login_session_end">Your login session is over</string>
+
+    <string name="list_trainer_speciality_desc">Training session:  %1$s</string>
+    <string name="no_internet_desc">Oops... This page can\'t be opened.</string>
+    <string name="no_internet_desc_2">Please check your connection	</string>
+
+    <string name="no_internet_desc2">Oops... This page can\'t be opened. Please check your connection</string>
+
+    <string name="search_all_showcase_text">Click here to see a list of our trainers</string>
+    <string name="event_showcase_text">Click here to see the detail of our event that we held</string>
+    <string name="categories_showcase_text">Click here to see all of our training categories</string>
+    <string name="history_showcase_text">Click here to see your history booking</string>
+    <string name="schedule_showcase_text">Click here to see your training schedule</string>
+    <string name="location_showcase_text">Tap here to choose your favorite place</string>
+    <string name="booking_showcase_text">Double check your order here</string>
+    <string name="text_note_user_showcase">Write additional notes such as house numbers, building names, or even the color of the fence here</string>
+    <string name="choose_payment_showcase">Choose your desired payment method</string>
+    <string name="voucher_showcase_text">Tap here to apply a voucher</string>
+    <string name="confirm_showcase_text">Tap here to confirm your order</string>
+    <string name="map_showcase_text">Make sure the address matches the point on the map</string>
+    <string name="schedule_tabs_trainer_showcase">See our trainers schedule and their various training session </string>
+    <string name="profile_tabs_trainer_showcase">See more about our trainers here</string>
+    <string name="calender_view_showcase">Search and select your training date</string>
+    <string name="schedule_showcase">Select your training time here</string>
+    <string name="speciality_showcase">Choose your favorite training here</string>
+    <string name="button_booking_showcase">Click here to order your training session</string>
+    <string name="button_booking_package_showcase">Click here to order your training package</string>
+    <string name="sertificate_trainer_showcase">Here are some certificates from our trainers</string>
+    <string name="photos_trainer_showcase">Here are some photos of activities from our trainers</string>
+    <string name="category_speciality_showcase">search and select your favorite sport here</string>
+    <string name="category_search_date_showcase">Search and select your training date here</string>
+    <string name="category_togglebutton_man_showcase">Click here if you want a male Trainer</string>
+    <string name="category_togglebutton_woman_showcase">Click here if you want a female Trainer</string>
+    <string name="category_search_trainer_showcase">Click here to start looking for your Trainer</string>
+    <string name="filter_trainer_showcase">Search your favorite trainer by their name here!</string>
+    <string name="filter_date_showcase">Pick your training date here!</string>
+    <string name="toolbar_filter_showcase">There are more filters here too!</string>
+    <string name="detai_trainer_showcase">See our mini trainers detail here!</string>
+    <string name="sesion_trainer_showcase">Tap here to book your favorite session with our trainers!</string>
+    <string name="package_trainer_showcase">Tap here to book our trainer special training package!</string>
+    <string name="skip">SKIP</string>
+    <string name="filter_gender_showcase">Choose trainers gender to make your session more comfortable</string>
+    <string name="filter_speciality_showcase">Pick your favorite training session here</string>
+    <string name="filter_apply_showcase">Click here to search you filtered trainer</string>
+    <string name="finish_showcase">Start MUFIT now!</string>
+
+    <string name="faq">FAQ</string>
+    <string name="profile">Profile</string>
+    <string name="website">Website</string>
+    <string name="socmed">Social Media</string>
+    <string name="settings">Settings</string>
+
+    <string name="language">Language</string>
+    <string name="repeat_tutorial">Repeat Tutorial</string>
+
+    <string name="indonesia">Indonesia</string>
+    <string name="english">English</string>
+
+    <string name="username">Full Name</string>
+    <string name="address">Addess</string>
+    <string name="change_password">Change Password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="atur_ulang">Change Password</string>
+    <string name="change_name">Change Fullname</string>
+    <string name="change_name_hint">New Fullname</string>
+
+    <string name="change_name_button">Edit</string>
+    <string name="change_phone">Change</string>
+    <string name="change_phone_hint">New phone number</string>
+
+    <string name="apply_changes">Edit</string>
+    <string name="apply_changes_for_toolbar_menu">Are you sure want to edit your profile ?</string>
+    <string name="apply_changes_for_toolbar_menu_denied">You have not edited your profile</string>
+    <string name="edit_profile_success">Your profile is successfully updated</string>
+    <string name="edit_pass_success">Your password is successfully changed</string>
+    <string name="edit_pass_empty_validation">Please insert current password, new password, and confirm new password
+    </string>
+
+    <string name="voucher_details_title">Voucher Details</string>
+    <string name="voucher_details_code_title">Voucher Code</string>
+    <string name="copy_code">Copy Code</string>
+    <string name="voucher_details_btn_text">Booking Now</string>
+
+    <string name="ads_detail_title">Advertisement Detail</string>
+    <string name="ads_name_title">Information</string>
+    <string name="advertisement">Advertisement</string>
+
+    <string name="voucher_toolbar_title">Voucher</string>
+
+    <string name="choose_total_booking">Session that can be choose:\u0020</string>
+    <string name="time_filter_validation">Time span must be 1 hour</string>
+    <string name="payment_desc_hint">Payment description</string>
+    <string name="cancel_payment">Cancel</string>
+    <string name="btn_bayar">Pay</string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+    <string name="service_fee">Service Fee</string>
+    <string name="dummy_text_payment_method">Transfer Bank</string>
+    <string name="error_validate_payment_method">Please choose payment method to proceed</string>
+
+    <string name="my_voucher">My Voucher</string>
+    <string name="my_voucher_applied">Voucher Applied</string>
+    <string name="input_voucher_code">Input voucher code</string>
+    <string name="choose_voucher">Choose voucher</string>
+    <string name="use_vocher">USE</string>
+    <string name="please_select_voucher_to_use">No Voucher is selected</string>
+    <string name="voucher_choosen_not_match">The active voucher does not match the class you choose </string>
+    <string name="voucher_not_valid">Voucher is not found, please input the right one or remove the code to proceed</string>
+
+    <string name="package_title">Package</string>
+    <string name="select_class">Select class</string>
+    <string name="select_package">Select package</string>
+    <string name="package_5x_dec">** Get 10% off sessions with 20 days expiry date!</string>
+    <string name="package_10x_dec">** Get 20% off sessions with 40 days expiry date!</string>
+
+    <string name="until">Until %1$s</string>
+    <string name="text_voucher_code">Voucher Code</string>
+    <string name="voucher_value">Value</string>
+    <string name="available">%1$d / %2$d Available</string>
+    <string name="single_voucher">For single use only</string>
+
+
+    <string name="toogle_schedule">Schedule</string>
+    <string name="toogle_profile">Profile</string>
+    <string name="term_and_condition">By continuing. You are agreeing to the <a href="https://mufit.id/page/terms.html/">Term&amp;Conditions</a></string>
+    <string name="order_detail">Order Details</string>
+    <string name="order_detail_date">Date</string>
+    <string name="order_detail_shift">Shift</string>
+    <string name="order_detail_class">Class</string>
+    <string name="booking_note_user">Note</string>
+    <string name="booking_voucher_title1">Voucher</string>
+    <string name="booking_price">Price</string>
+    <string name="booking_discount">Discount</string>
+    <string name="error_detail_trainer_speciality">Please choose a class you want first</string>
+    <string name="error_detail_trainer_schedule">Please choose practice time first</string>
+    <string name="detail_trainer_speciality_equipment">Equipment: %1$s</string>
+    <string name="detail_trainer_speciality_max_people">Max People: %1$s</string>
+    <string name="myvoucher_not_found">Oops... Voucher is not found</string>
+    <string name="biaya_tambahan">Service Fee</string>
+    <string name="choose_time">Choose Time</string>
+    <string name="choose_class">Choose Class</string>
+    <string-array name="schedule_calendar_custom_weekdays">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </string-array>
+    <string name="history_detail_date_and_time">Date and Time</string>
+    <string name="history_detail_voucher_label">Voucher Code</string>
+    <string name="booking_event">Event Booking</string>
+    <string name="filter_label">Filter:</string>
+    <string name="button_ok">OK</string>
+    <string name="profile_pic_image_src">Choose image source</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="button_no">NO</string>
+    <string name="button_yes">YES</string>
+    <string name="dialog_unsaved_changes_part1">You have not saved your changes.</string>
+    <string name="dialog_unsaved_changes_part2">Discard them?</string>
+    <string name="error">Error</string>
+    <string name="cancel_voucher_then_return">Cancel voucher usage and return to My Voucher page?</string>
+    <string name="schedule">Schedule</string>
+
+    <string name="edit_text_search_home">Search trainer,class or keywords</string>
+    <string name="home_menu_trainer">Trainers</string>
+    <string name="home_menu_mufitEvent">Mufit Event</string>
+    <string name="home_menu_newsPromo">News &amp; Promo</string>
+    <string name="home_categories_group_exercies">Group exercies</string>
+    <string name="home_categories_kid_exercies">Kid exercies</string>
+    <string name="home_categories_personal_trainer">Personal Trainer</string>
+    <string name="home_whathotTitle">What\'s Hot</string>
+    <string name="subcategories_date_time_prompt">When do you want to train?</string>
+    <string name="double_back_to_exit">Tap back once more to exit</string>
+    <string name="subcategory_next_step">Cool! Let\'s move to the next step!</string>
+    <string name="subcategory_personalise_your_training">Personalise your training below</string>
+    <string name="subcategory_select_trainer_gender"> Select Trainer\'s Gender</string>
+    <string name="home_welcome">Welcome,</string>
+    <string name="guest">Guest</string>
+    <string name="clear_voucher_code">Clear voucher code</string>
+    <string name="search_trainer">Search Trainer</string>
+    <string name="fragment_profile_stay_tuned">Our trainers are preparing something cool. Stay tuned!</string>
+
+    <string name="history_detail_cancel_booking_hint">Reason (min. 20 chars)</string>
+    <string name="history_detail_cancel_booking_validation_message">Please enter at least 20 characters</string>
+    <string name="history_detail_cancel_booking_title">Cancel Booking</string>
+    <string name="history_detail_cancel_booking_prompt">Tell us the reason to improve our service!</string>
+    <string name="book_package_expiry_date">"** %1$d sessions with %2$d days expiry date"</string>
+    <string name="error_server_internal_error">Failed to process your request. Please try again. (500)</string>
+    <string name="error_service_not_available">We are currently down for maintenance. Please try again later. (503)</string>
+    <string name="detail_trainer_speciality_no_equipment"> N/A</string>
+    <string name="check_body_composition_history">Check BCM History</string>
+
+    <string name="training_location">Training Location</string>
+    <string name="voucher">Voucher</string>
+    <string name="voucher_code_copied">Voucher code copied</string>
+    <string name="validity_period">Validity Period</string>
+    <string name="format_event_date">%1$s, %2$s - %3$s</string>
+    <string name="repeat_tutorial_confirmation">Would you like to repeat the tutorial?</string>
+    <string name="notice">Notice</string>
+    <string name="session_has_expired_prompt">Sorry, your session has expired. Please log into the system again.</string>
+    <string name="rate_review_validation_empty_rating">Please kindly leave your rating.</string>
+    <string name="rate_review_validation_empty_review">Please kindly leave your rating.</string>
+    <string name="schedule_session_information_placeholder">Body Combat by Armstrong</string>
+    <string name="body_weight">Body Weight</string>
+    <string name="height">Height</string>
+    <string name="submit">Submit</string>
+    <string name="validation_onboarding_empty">Please submit your height and body weight</string>
+    <string name="onboarding_success">Your data has been submitted successfully!</string>
+    <string name="onboarding">Onboarding</string>
+    <string name="muhealth_welcome">Welcome to MuHealth!</string>
+    <string name="muhealth_prompt_enter_information">To start using MuHealth, we need the following information:</string>
+</resources>
+

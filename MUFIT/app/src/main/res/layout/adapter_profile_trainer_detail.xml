@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_profile_trainer_detail"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/booking_divider"
+        android:background="#FFE5E5E5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_profile_trainer_detail_nunmber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:gravity="center"
+        android:text="01"
+        android:textColor="#FF4A4A4A"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_profile_trainer_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:text="Certified Personal Trainer"
+        android:textColor="#FF4A4A4A"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_profile_trainer_detail_nunmber"
+        app:layout_constraintStart_toEndOf="@+id/text_profile_trainer_detail_nunmber" />
+
+    <TextView
+        android:id="@+id/text_profile_trainer_detail_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6dp"
+        android:layout_marginEnd="@dimen/_44dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:fontFamily="@font/trueno_light"
+        android:text="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animid."
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="#FF545454"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_profile_trainer_detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_profile_trainer_detail_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

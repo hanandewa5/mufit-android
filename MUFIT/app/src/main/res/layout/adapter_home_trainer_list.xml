@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_homeTrainer"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="@dimen/_15dp"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--background is needed to cast shadows; white is chosen because it blends with background-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="@dimen/_64dp"
+            android:layout_height="@dimen/_64dp"
+            android:background="@drawable/rounded_image_shadow"
+            android:elevation="@dimen/_5dp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image_homeTrainer"
+            android:layout_width="@dimen/_64dp"
+            android:layout_height="@dimen/_64dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="@dimen/_5dp"
+            android:contentDescription="@string/default_content_desc"
+            app:riv_corner_radius="@dimen/card_corner_radius"
+            android:src="@drawable/trainer_icon" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/text_trainerNameHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trueno_light"
+        android:textSize="@dimen/_10sp"
+        android:textColor="#FF4A4A4A"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/_10dp"
+        android:gravity="center" />
+
+</LinearLayout>

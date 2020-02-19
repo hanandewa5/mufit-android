@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_speciality_trainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10dp"
+    android:paddingStart="@dimen/_20dp"
+    android:paddingEnd="@dimen/_20dp">
+
+
+    <CheckBox
+        android:id="@+id/checkbox_speciality_trainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_speciality_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:text="For Yoga by Armstrong"
+        android:textColor="#FF4A4A4A"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkbox_speciality_trainer"
+        app:layout_constraintStart_toEndOf="@id/checkbox_speciality_trainer" />
+
+    <TextView
+        android:id="@+id/text_speciality_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trueno_light"
+        android:text="Max People: 12"
+        android:textColor="#FF545454"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintStart_toStartOf="@id/text_speciality_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_speciality_equipment" />
+
+    <TextView
+        android:id="@+id/text_speciality_equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2dp"
+        android:fontFamily="@font/trueno_light"
+        android:text="Equipment: Tongkat Selfie"
+        android:textColor="#FF545454"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintStart_toStartOf="@id/text_speciality_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_speciality_name" />
+
+    <TextView
+        android:id="@+id/text_speciality_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:gravity="center"
+        android:text="Rp. 123456,-"
+        android:textColor="#FFA500"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_speciality_name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

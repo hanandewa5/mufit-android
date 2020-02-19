@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MufitToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:title="@string/rate_review_toolbar_title"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance">
+
+            <!--<TextView-->
+                <!--android:id="@+id/toolbar_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/rate_review_toolbar_title"-->
+                <!--android:textColor="@color/white100"-->
+                <!--android:textSize="@dimen/toolbar_text_size" />-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_headerRateReview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_257dp"
+                android:background="@color/preload_image_gray"
+                android:contentDescription="@string/default_content_desc"
+                android:tint="#73000000" />
+
+            <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="220dp"-->
+            <!--android:background="@drawable/image_background_2"/>-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_RateReview"
+                android:layout_width="@dimen/_96dp"
+                android:layout_height="@dimen/_96dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_60dp"
+                android:src="@drawable/trainer_icon" />
+
+            <TextView
+                android:id="@+id/text_TrainerNameRateReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_RateReview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15dp"
+                android:text="Trainer Name"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/_18sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_ratereview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_TrainerNameRateReview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_ratingDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white100"
+                    android:textSize="@dimen/_14sp" />
+
+                <ImageView
+                    android:id="@+id/image_ratingRateReview"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:contentDescription="@string/default_content_desc"
+                    android:src="@drawable/rating_star" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_RateReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_headerRateReview"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                app:cardElevation="@dimen/_5dp"
+                app:cardCornerRadius="@dimen/card_corner_radius">
+                <!--android:background="@drawable/card_with_grey_border"-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_213dp">
+
+                    <TextView
+                        android:id="@+id/text_rateReviewDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_12dp"
+                        android:fontFamily="@font/trueno_semi_bold"
+                        android:gravity="center"
+                        android:text="@string/rate_review_desc"
+                        android:textColor="#FF4A4A4A"
+                        android:textSize="@dimen/_16sp" />
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_below="@id/text_rateReviewDesc"
+                        android:background="@color/line_color" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line1"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:numStars="5"
+                        android:stepSize="1.0"
+                        android:theme="@style/ratingBar" />
+
+                    <EditText
+                        android:id="@+id/text_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_marginBottom="@dimen/_30dp"
+                        android:background="@drawable/edit_text_bg_thin_underline_selector"
+                        android:fontFamily="@font/trueno_light"
+                        android:hint="@string/hint_review_text"
+                        android:inputType="textCapSentences"
+                        android:paddingBottom="@dimen/_12dp"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:textAlignment="center"
+                        android:textColor="#FF545454"
+                        android:textSize="@dimen/_12sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_submitRateReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView_RateReview"
+                android:layout_margin="@dimen/_20dp"
+                android:background="@drawable/button_background_blue"
+                android:elevation="@dimen/_10dp"
+                android:fontFamily="@font/trueno_semi_bold"
+                android:text="@string/submit_rate_review"
+                android:textAllCaps="true"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/_18sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

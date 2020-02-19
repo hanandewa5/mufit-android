@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3.5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_homeCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@color/preload_image_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_5dp" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_homeCategoriesName"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_margin="@dimen/_5dp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/white100"-->
+    <!--android:textSize="@dimen/home_categories_font" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MuHealthComponent">
+        <attr name="comp_icon" format="reference" />
+        <attr name="comp_titleString" format="string" />
+        <attr name="comp_valueString" format="string" />
+        <attr name="comp_changeIndicator" format="reference"/>
+        <attr name="comp_valueChangeString" format="string"/>
+    </declare-styleable>
+</resources>

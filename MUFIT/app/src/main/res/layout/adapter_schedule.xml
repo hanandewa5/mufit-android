@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.vipulasri.timelineview.TimelineView
+        android:id="@+id/timeline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:markerSize="@dimen/_18dp"
+        app:marker="@drawable/schedule_timeline_marker"
+        app:startLineColor="#D8D8D8"
+        app:endLineColor="#D8D8D8"
+        app:lineWidth="1dp"
+        app:lineStyle="normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/session_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/trueno_medium"
+            android:text="@string/schedule_session_information_placeholder"
+            android:textColor="#A5A5A5"/>
+
+        <TextView
+            android:id="@+id/session_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/trueno_light"
+            android:text="@string/schedule_session_time_placeholder"
+            android:textColor="#F4A007"/>
+
+        <TextView
+            android:id="@+id/session_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_light"
+            android:text="@string/schedule_session_description_placeholder"
+            android:textColor="#A5A5A5"
+            android:maxLines="3"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

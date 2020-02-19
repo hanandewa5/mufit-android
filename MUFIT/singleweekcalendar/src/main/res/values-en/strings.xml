@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calender_sun">Sun</string>
+    <string name="calender_mon">Mon</string>
+    <string name="calender_tue">Tue</string>
+    <string name="calender_wed">Wed</string>
+    <string name="calender_thu">Thu</string>
+    <string name="calender_fri">Fri</string>
+    <string name="calender_sat">Sat</string>
+
+    <string name="calender_jan">January</string>
+    <string name="calender_feb">February</string>
+    <string name="calender_mar">March</string>
+    <string name="calender_apr">April</string>
+    <string name="calender_mei">May</string>
+    <string name="calender_jun">June</string>
+    <string name="calender_jul">July</string>
+    <string name="calender_agu">August</string>
+    <string name="calender_sep">September</string>
+    <string name="calender_okt">October</string>
+    <string name="calender_nov">November</string>
+    <string name="calender_des">December</string>
+</resources>

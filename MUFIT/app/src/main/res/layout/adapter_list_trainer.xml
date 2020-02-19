@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchTrainerAdapter_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/searchTrainer_imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/preload_image_gray"
+        android:contentDescription="@string/default_content_desc" />
+
+    <!--  To give blurred effect to the trainer header-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:layout_marginTop="@dimen/_70dp"
+        android:background="@drawable/image_background_3" />
+
+    <LinearLayout
+        android:id="@+id/searchTrainerAdapter_layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/searchTrainerAdapter_imgTrainerProfile"
+            android:layout_width="@dimen/home_trainer_list_height_width"
+            android:layout_height="@dimen/home_trainer_list_height_width"
+            android:contentDescription="@string/default_content_desc"
+            android:elevation="@dimen/_5dp"
+            android:src="@drawable/trainer_icon" />
+
+        <LinearLayout
+            android:id="@+id/searchTrainerAdapter_layoutHeaderContents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchTrainerAdapter_textTrainerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/trueno_medium"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/adapter_list_trainer_font" />
+
+            <TextView
+                android:id="@+id/searchTrainerAdapter_textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:fontFamily="@font/trueno_medium"
+                android:maxLines="1"
+                android:textColor="@color/white100"
+                android:textSize="@dimen/adapter_list_trainer_font" />
+
+            <ImageView
+                android:id="@+id/searchTrainerAdapter_imgRatingStar"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_3dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/default_content_desc"
+                android:maxLines="1"
+                android:src="@drawable/rating_star" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchTrainerAdapter_layoutDescription"
+        android:layout_width="@dimen/_348dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchTrainerAdapter_layoutHeader"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/searchTrainerAdapter_textSpecialityAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_regular"
+            android:textSize="@dimen/_12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/searchTrainerAdapter_labelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="@string/starts_from"
+                android:textSize="@dimen/_12sp" />
+
+            <TextView
+                android:id="@+id/searchTrainerAdapter_textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:fontFamily="@font/trueno_light"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchTrainerAdapter_layoutDescription"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_13dp"
+        android:paddingBottom="@dimen/_13dp">
+
+        <Button
+            android:id="@+id/searchTrainerAdapter_btnBookPackage"
+            android:layout_width="@dimen/list_trainer_adapter_button_width"
+            android:layout_height="@dimen/list_trainer_adapter_button_height"
+            android:background="@drawable/button_package_session"
+            android:elevation="@dimen/_10dp"
+            android:enabled="false"
+            android:fontFamily="@font/trueno_medium"
+            android:text="@string/booking_package"
+            android:textColor="@color/white100"
+            android:textSize="@dimen/_12sp" />
+
+        <Button
+            android:id="@+id/searchTrainerAdapter_btnBookSession"
+            android:layout_width="@dimen/list_trainer_adapter_button_width"
+            android:layout_height="@dimen/list_trainer_adapter_button_height"
+            android:layout_marginStart="@dimen/_10dp"
+            android:background="@drawable/button_book_session"
+            android:elevation="@dimen/_10dp"
+            android:enabled="true"
+            android:fontFamily="@font/trueno_medium"
+            android:text="@string/booking_now"
+            android:textColor="@color/white100"
+            android:textSize="@dimen/_12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

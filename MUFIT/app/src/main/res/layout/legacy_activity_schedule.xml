@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/legacy_element_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mufit_red_gradient"
+            android:minHeight="?android:attr/actionBarSize"
+            app:titleTextColor="@color/white100">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/default_content_desc"
+                android:src="@drawable/mufit_white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/navigation"
+            android:layout_below="@id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mcv_calendarMode="month"
+                    app:mcv_dateTextAppearance="@style/CalendarDateAppearance"
+                    app:mcv_headerTextAppearance="@style/CalendarHeaderAppearance"
+                    app:mcv_selectionColor="@color/schedule_calendar_indicator_color"
+                    app:mcv_arrowColor="#FFACACAC"
+                    app:mcv_weekDayLabels="@array/schedule_calendar_custom_weekdays"
+                    app:mcv_weekDayTextAppearance="@style/CalendarWeekDaysAppearance" />
+
+
+                <TextView
+                    android:id="@+id/text_schedule_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calendar_view"
+                    android:text="@string/schedule_title"
+                    android:textColor="@color/grey_2"
+                    android:fontFamily="@font/trueno_semi_bold"
+                    android:textSize="@dimen/_16sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_below="@id/text_schedule_title"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:background="@color/black87" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_schedule_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/divider"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_no_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:text="@string/schedule_no_detail"
+                    android:fontFamily="@font/trueno_regular"
+                    android:textColor="@color/grey_2"
+                    android:textSize="@dimen/_14sp" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</com.flipboard.bottomsheet.BottomSheetLayout>

@@ -1,0 +1,110 @@
+{
+  "project_info": {
+    "project_number": "459752952576",
+    "firebase_url": "https://fir-application-a37ce.firebaseio.com",
+    "project_id": "fir-application-a37ce",
+    "storage_bucket": "fir-application-a37ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459752952576:android:f74b0683445e6acee419e5",
+        "android_client_info": {
+          "package_name": "com.nostratech.mufit.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459752952576-59qbcmrg1uc8412svn84kvk5be1pa118.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nostratech.mufit.consumer",
+            "certificate_hash": "344bab399ab75383dac72cfcb01d4a0d15abbe82"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQo_BAfiGKpnDW9XuYuJI5dZRahROWC8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459752952576-mdur57knuo7cu5utltq261j5cc9eai0s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mufit.id"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459752952576:android:03eb4f55872f30c3e419e5",
+        "android_client_info": {
+          "package_name": "com.nostratech.mufit.trainer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459752952576-cm6j29jf0elft58v46ktbcdt847aitge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nostratech.mufit.trainer",
+            "certificate_hash": "b9eb8840a9eda6e238b6bb521b9ca8794548ffe3"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQo_BAfiGKpnDW9XuYuJI5dZRahROWC8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459752952576-mdur57knuo7cu5utltq261j5cc9eai0s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mufit.id"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459752952576:android:b72d36d1a68eb840e419e5",
+        "android_client_info": {
+          "package_name": "id.mufit.mufitnutritionist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQo_BAfiGKpnDW9XuYuJI5dZRahROWC8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459752952576-mdur57knuo7cu5utltq261j5cc9eai0s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mufit.id"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

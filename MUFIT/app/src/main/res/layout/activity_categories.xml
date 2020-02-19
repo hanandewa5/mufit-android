@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_trainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/headerPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150dp"
+        android:tint="#73000000"
+        android:contentDescription="@string/default_content_desc" />
+
+    <!--    Toolbar is used to show a Back Button on the header.
+            Hence it's given a transparent background -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabIndicatorColor="@android:color/transparent"/>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/_80dp"-->
+    <!--android:layout_marginTop="@dimen/_70dp"-->
+    <!--android:background="#73000000" />-->
+
+    <LinearLayout
+        android:id="@+id/layout_nameRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/headerPhotos"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:maxLines="1"
+            android:text="Personal Training"
+            android:textColor="@color/white100"
+            android:textSize="@dimen/_16dp" />
+
+        <TextView
+            android:id="@+id/text_categoryDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:fontFamily="@font/trueno_light"
+            android:text="We have various trainings with curated trainers. Feel free to choose what makes you feel like YOU."
+            android:textColor="@color/white100"
+            android:textSize="@dimen/_10sp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerPhotos"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:layout_below="@+id/rv_Categories"
+        android:background="#FFE8E8E8" />
+
+    <LinearLayout
+        android:id="@+id/layout_personalize_trainer"
+        android:layout_width="@dimen/_348dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_14dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_semi_bold"
+            android:text="@string/subcategory_next_step"
+            android:textColor="#FF626262"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_light"
+            android:layout_marginTop="@dimen/_3dp"
+            android:text="@string/subcategory_personalise_your_training"
+            android:textColor="#FF626262"
+            android:textSize="@dimen/_12sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layout_search_when_train"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_personalize_trainer"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardElevation="@dimen/_4dp"
+        app:strokeColor="#FFE8E8E8"
+        app:strokeWidth="@dimen/_1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_search_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/search_icon_date_time"
+                android:layout_width="@dimen/_15dp"
+                android:layout_height="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_6dp"
+                android:src="@drawable/mufit_search_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--2dp margin bottom to make the text look centered relative to search icon-->
+            <EditText
+                android:id="@+id/etCategoriesDateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:enabled="true"
+                android:focusable="false"
+                android:fontFamily="@font/trueno_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/subcategories_date_time_prompt"
+                android:padding="@dimen/_10dp"
+                android:textColor="#FF808181"
+                android:textColorHint="#FF808181"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/search_icon_date_time"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_choose_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_search_when_train"
+        android:layout_alignParentStart="true"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingTop="@dimen/_20dp"
+        android:paddingEnd="@dimen/_20dp"
+        android:paddingBottom="@dimen/_20dp">
+
+        <TextView
+            android:id="@+id/label_selectGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trueno_light"
+            android:text="@string/subcategory_select_trainer_gender"
+            android:textColor="#FF626262"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_genderMan"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_9dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            app:cardCornerRadius="@dimen/_5dp"
+            app:cardElevation="@dimen/_4dp"
+            app:layout_constraintEnd_toStartOf="@id/card_genderWoman"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_selectGender">
+
+            <ToggleButton
+                android:id="@+id/btnManCategories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40dp"
+                android:background="@drawable/toggle_button_bg_subcategory"
+                android:elevation="@dimen/_5dp"
+                android:fontFamily="@font/trueno_regular"
+                android:textSize="@dimen/_12sp"
+                android:textAllCaps="false"
+                android:textColor="@color/toggle_button_selector"
+                android:textOff="@string/man"
+                android:textOn="@string/man" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_genderWoman"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40dp"
+            app:cardCornerRadius="@dimen/_5dp"
+            app:cardElevation="@dimen/_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_genderMan"
+            app:layout_constraintTop_toTopOf="@id/card_genderMan">
+
+            <ToggleButton
+                android:id="@+id/btnWomanCategories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40dp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/toggle_button_bg_subcategory"
+                android:textSize="@dimen/_12sp"
+                android:elevation="@dimen/_5dp"
+                android:textAllCaps="false"
+                android:textColor="@color/toggle_button_selector"
+                android:textOff="@string/woman"
+                android:textOn="@string/woman" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_search_trainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@id/layout_choose_gender"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/button_background_blue"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:elevation="@dimen/_10dp"
+        android:fontFamily="@font/trueno_semi_bold"
+        android:text="@string/search_trainer"
+        android:textColor="@color/white100"
+        android:textSize="@dimen/_18sp" />
+
+</RelativeLayout>

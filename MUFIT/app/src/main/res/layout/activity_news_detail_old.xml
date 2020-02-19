@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/MufitToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="News Details"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/news_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150dp"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:src="@color/preload_image_gray"
+                    app:riv_corner_radius="@dimen/_5dp" />
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:fontFamily="@font/trueno_semi_bold"
+                    android:text="Article Title"
+                    android:textColor="@color/black87"
+                    android:textSize="@dimen/_14sp" />
+
+                <TextView
+                    android:id="@+id/news_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/trueno_regular"
+                    android:focusable="true"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+         took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+         but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+         with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    android:textColor="@color/dark_gray"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_13sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>

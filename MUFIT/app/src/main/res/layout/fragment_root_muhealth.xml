@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/muhealth_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mufit_red_gradient"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/muhealth_toolbarLogo"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_60dp"
+            android:layout_width="@dimen/_60dp"
+            android:src="@drawable/mufit_white"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/newProfile_appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/mufit_red_gradient"-->
+<!--        android:elevation="9dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/newProfile_toolbar"-->
+<!--            style="@style/MufitToolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?android:attr/actionBarSize"-->
+<!--            app:title="@string/profile"-->
+<!--            app:titleTextAppearance="@style/ToolbarTitleAppearance">-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/muhealth_toolbar"
+        android:layout_alignParentBottom="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/newProfile_imageProfile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:src="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/newProfile_textEditImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/trueno_regular"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/newProfile_imageProfile"
+                app:layout_constraintEnd_toEndOf="@id/newProfile_imageProfile"
+                app:layout_constraintStart_toStartOf="@id/newProfile_imageProfile" />
+
+            <TextView
+                android:id="@+id/newProfile_textGreetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/trueno_regular"
+                android:text="Hi, Dedy Giharto !"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/newProfile_imageProfile"
+                app:layout_constraintTop_toTopOf="@id/newProfile_imageProfile" />
+
+            <TextView
+                android:id="@+id/newProfile_textMemberType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="Grup Nestle - Bootcamp"
+                app:layout_constraintStart_toStartOf="@id/newProfile_textGreetings"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_textGreetings" />
+
+            <TextView
+                android:id="@+id/newProfile_readyToRock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_light"
+                android:text="Ready to rock the week?"
+                android:layout_marginTop="@dimen/_5dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/newProfile_textMemberType"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_textMemberType" />
+
+            <TextView
+                android:id="@+id/newProfile_textReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:text="Sudahkah kamu menjalankan ini?"
+                android:fontFamily="@font/trueno_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_imageProfile" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/newProfile_checklist"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_textReminder"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <TextView
+                android:id="@+id/newProfile_textSeeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="Lihat selengkapnya"
+                android:fontFamily="@font/trueno_light"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_checklist"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/newProfile_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/error_red"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_textSeeDetails" />
+
+            <TextView
+                android:id="@+id/newProfile_textBmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trueno_medium"
+                android:layout_marginTop="@dimen/_5dp"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_divider1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="BMI Index kamu: 23 - Normal" />
+
+            <com.nostratech.mufit.consumer.muhealth.weightbar.MultiColorBar
+                android:id="@+id/newProfile_chartBmiCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_textBmi" />
+
+<!--            <View-->
+<!--                android:id="@+id/newProfile_divider2"-->
+<!--                style="@style/MuHealthDivider"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/newProfile_chartBmiCategory" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newProfile_healthComponents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintTop_toBottomOf="@id/newProfile_chartBmiCategory"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>
